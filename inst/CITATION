@@ -1,0 +1,14 @@
+citHeader("To cite the mppR package in publications use:")
+
+citEntry(entry="Article",
+	title="How do the type of QTL effect and the form of the residual term influence QTL detection in multi-parent populations? A case study in the maize EU-NAM population",
+	author=as.person(c("Garin V", "Wimmer V", "Mezmouk S", "Malosetti M", "van Eeuwijk F")),
+	journal="Theoretical and Applied Genetics",
+	volume=130,
+	number=8,
+	pages="1-12",
+	year=2017,
+	publisher="Springer",
+textVersion=paste("Garin V, Wimmer V, Mezmouk S, Malosetti M, van Eeuwijk F (2017). How do the type of QTL effect and the form of the residual term influence QTL detection in multi-parent populations? A case study in the maize EU-NAM population.",
+"Theoretical and Applied Genetics 130(8):1-12.")
+)

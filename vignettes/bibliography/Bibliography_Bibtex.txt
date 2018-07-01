@@ -1,0 +1,998 @@
+% Encoding: windows-1252
+
+
+@Article{asreml_2009,
+  title={ASReml-R reference manual},
+  author={Butler, DG and Cullis, Brian R and Gilmour, AR and Gogel, BJ},
+  journal={The State of Queensland, Department of Primary Industries and Fisheries, Brisbane},
+  year={2009}
+}
+
+
+@Article{bardol_2013,
+  title={Combined linkage and linkage disequilibrium QTL mapping in multiple families of maize (Zea mays L.) line crosses highlights complementarities between models based on parental haplotype and single locus polymorphism},
+  author={Bardol, N and Ventelon, M and Mangin, B and Jasson, S and Loywick, V and Couton, F and Derue, C and Blanchard, P and Charcosset, A and Moreau, Laurence},
+  journal={Theoretical and applied genetics},
+  volume={126},
+  number={11},
+  pages={2717--2736},
+  year={2013},
+  publisher={Springer}
+}
+
+@Article{bauer_2013,
+  title={Intraspecific variation of recombination rate in maize},
+  author={Bauer, Eva and Falque, Matthieu and Walter, Hildrun and Bauland, Cyril and Camisan, Christian and Campo, Laura and Meyer, Nina and Ranc, Nicolas and Rincent, Renaud and Schipprack, Wolfgang and others},
+  journal={Genome Biol},
+  volume={14},
+  number={9},
+  pages={R103},
+  year={2013}
+}
+
+@Article{bink_2008,
+  title={Bayesian analysis of complex traits in pedigreed plant populations},
+  author={Bink, MCAM and Boer, MP and Ter Braak, CJF and Jansen, J and Voorrips, RE and Van de Weg, WE},
+  journal={Euphytica},
+  volume={161},
+  number={1-2},
+  pages={85--96},
+  year={2008},
+  publisher={Springer}
+}
+
+@Article{bink2002multiple,
+  title={Multiple QTL mapping in related plant populations via a pedigree-analysis approach},
+  author={Bink, MCAM and Uimari, P and Sillanp{\"a}{\"a}, M and Janss, L and Jansen, R},
+  journal={Theoretical and Applied Genetics},
+  volume={104},
+  number={5},
+  pages={751--762},
+  year={2002},
+  publisher={Springer}
+}
+
+@Article{bink2012qtl,
+  title={QTL linkage analysis of connected populations using ancestral marker and pedigree information},
+  author={Bink, Marco CAM and Totir, L Radu and ter Braak, Cajo JF and Winkler, Christopher R and Boer, Martin P and Smith, Oscar S},
+  journal={Theoretical and Applied Genetics},
+  volume={124},
+  number={6},
+  pages={1097--1113},
+  year={2012},
+  publisher={Springer}
+}
+
+@Article{blanc_2006,
+  title={Connected populations for detecting quantitative trait loci and testing for epistasis: an application in maize},
+  author={Blanc, G and Charcosset, A and Mangin, B and Gallais, A and Moreau, L},
+  journal={Theoretical and Applied Genetics},
+  volume={113},
+  number={2},
+  pages={206--224},
+  year={2006},
+  publisher={Springer}
+}
+
+@article{bradbury2007tassel,
+  title={TASSEL: software for association mapping of complex traits in diverse samples},
+  author={Bradbury, Peter J and Zhang, Zhiwu and Kroon, Dallas E and Casstevens, Terry M and Ramdoss, Yogesh and Buckler, Edward S},
+  journal={Bioinformatics},
+  volume={23},
+  number={19},
+  pages={2633--2635},
+  year={2007},
+  publisher={Oxford Univ Press}
+}
+
+
+@Article{broman_rqtl,
+  title={R/qtl: QTL mapping in experimental crosses},
+  author={Broman, Karl W and Wu, Hao and Sen, {\'S}aunak and Churchill, Gary A},
+  journal={Bioinformatics},
+  volume={19},
+  number={7},
+  pages={889--890},
+  year={2003},
+  publisher={Oxford Univ Press}
+}
+
+
+@article{cavanagh2008mutations,
+  title={From mutations to MAGIC: resources for gene discovery, validation and delivery in crop plants},
+  author={Cavanagh, Colin and Morell, Matthew and Mackay, Ian and Powell, Wayne},
+  journal={Current opinion in plant biology},
+  volume={11},
+  number={2},
+  pages={215--221},
+  year={2008},
+  publisher={Elsevier}
+}
+
+
+
+@Article{char_iQTLm,
+  title={Heterosis in maize investigated using connected RIL populations},
+  author={Charcosset, A and Mangin, B and Moreau, L and Combes, L and Jourjon, MF and Gallais, A},
+  journal={COLLOQUES-INRA},
+  pages={89--98},
+  year={2001},
+  publisher={INRA; 1999}
+}
+
+@Book{chatterjee_2012,
+  title={Regression analysis by example 5th edition},
+  author={Chatterjee, Samprit and Hadi, Ali S},
+  year={2012},
+  publisher={John Wiley \& Sons}
+}
+
+@ArtiCLE{chur_1994,
+  author = {Churchill, Gary A and Doerge, Rebecca W},
+  title = {Empirical threshold values for quantitative trait mapping.},
+  journal = {Genetics},
+  year = {1994},
+  volume = {138},
+  pages = {963--971},
+  number = {3},
+  publisher = {Genetics Soc America}
+}
+
+@Article{coles_2010,
+  title={Genetic control of photoperiod sensitivity in maize revealed by joint multiple population analysis},
+  author={Coles, Nathan D and McMullen, Michael D and Balint-Kurti, Peter J and Pratt, Richard C and Holland, James B},
+  journal={Genetics},
+  volume={184},
+  number={3},
+  pages={799--812},
+  year={2010},
+  publisher={Genetics Soc America}
+}
+
+
+@Article{covarrubias_sommer_2016,
+    title = {Genome assisted prediction of quantitative traits using the R package sommer},
+    author = {Covarrubias-Pazaran, G},
+    journal = {PLoS ONE},
+    year = {2016},
+    volume = {11},
+    pages = {1-15},
+  }
+
+@Book{cox_1989,
+  title={Analysis of binary data},
+  author={Cox, David Roxbee and Snell, E Joyce},
+  volume={32},
+  year={1989},
+  publisher={CRC Press}
+}
+
+
+
+@Article{crepieux_2004_IBD,
+  title={Quantitative Trait Loci (QTL) Detection in Multicross Inbred Designs Recovering QTL Identical-by-Descent Status Information From Marker Data},
+  author={Crepieux, S{\'e}bastien and Lebreton, Claude and Servin, Bertrand and Charmet, Gilles},
+  journal={Genetics},
+  volume={168},
+  number={3},
+  pages={1737--1749},
+  year={2004},
+  publisher={Genetics Soc America}
+}
+
+@Article{crepieux_2005_application,
+  title={Application of a new IBD-based QTL mapping method to common wheat breeding population: analysis of kernel hardness and dough strength},
+  author={Crepieux, Sebastien and Lebreton, Claude and Flament, Pascal and Charmet, Gilles},
+  journal={Theoretical and applied genetics},
+  volume={111},
+  number={7},
+  pages={1409--1419},
+  year={2005},
+  publisher={Springer}
+}
+
+
+@article{doerge2002mapping,
+  title={Mapping and Analysis of Quantitative Trait Loci in Experimental Populations},
+  author={Doerge, Rebecca W},
+  journal={Nature Reviews Genetics},
+  volume={3},
+  number={1},
+  pages={43--52},
+  year={2002},
+  publisher={Nature Publishing Group}
+}
+
+
+
+@Article{fisher_1918,
+  title={The Correlation between Relatives on the Supposition of Mendelian Inheritance.},
+  author={Fisher, Ronald A},
+  journal={Transactions of the royal society of Edinburgh},
+  volume={52},
+  number={02},
+  pages={399--433},
+  year={1918},
+  publisher={Cambridge Univ Press}
+}
+
+@book{friedman2001elements,
+  title={The elements of statistical learning},
+  author={Friedman, Jerome and Hastie, Trevor and Tibshirani, Robert},
+  volume={1},
+  year={2001},
+  publisher={Springer series in statistics Springer, Berlin}
+}
+
+@Article{ganal_2011,
+  title={A large maize (Zea mays L.) SNP genotyping array: development and germplasm genotyping, and genetic mapping to compare with the B73 reference genome},
+  author={Ganal, Martin W and Durstewitz, Gregor and Polley, Andreas and B{\'e}rard, Aur{\'e}lie and Buckler, Edward S and Charcosset, Alain and Clarke, Joseph D and Graner, Eva-Maria and Hansen, Mark and Joets, Johann and others},
+  journal={PloS one},
+  volume={6},
+  number={12},
+  pages={e28334},
+  year={2011},
+  publisher={Public Library of Science}
+}
+
+@article{gapit2012,
+  title={GAPIT: genome association and prediction integrated tool},
+  author={Lipka, Alexander E and Tian, Feng and Wang, Qishan and Peiffer, Jason and Li, Meng and Bradbury, Peter J and Gore, Michael A and Buckler, Edward S and Zhang, Zhiwu},
+  journal={Bioinformatics},
+  volume={28},
+  number={18},
+  pages={2397--2399},
+  year={2012},
+  publisher={Oxford Univ Press}
+}
+
+@article{genabel2007,
+  title={GenABEL: an R library for genome-wide association analysis},
+  author={Aulchenko, Yurii S and Ripke, Stephan and Isaacs, Aaron and Van Duijn, Cornelia M},
+  journal={Bioinformatics},
+  volume={23},
+  number={10},
+  pages={1294--1296},
+  year={2007},
+  publisher={Oxford Univ Press}
+}
+
+@Article{giraud_2014,
+  title={Linkage Disequilibrium with Linkage Analysis of Multiline Crosses Reveals Different Multiallelic QTL for Hybrid Performance in the Flint and Dent Heterotic Groups of Maize},
+  author={Giraud, H{\'e}lo{\"\i}se and Lehermeier, Christina and Bauer, Eva and Falque, Matthieu and Segura, Vincent and Bauland, Cyril and Camisan, Christian and Campo, Laura and Meyer, Nina and Ranc, Nicolas and others},
+  journal={Genetics},
+  volume={198},
+  number={4},
+  pages={1717--1734},
+  year={2014},
+  publisher={Genetics Soc America}
+}
+
+@Article{grubbs_1950,
+  title={Sample criteria for testing outlying observations},
+  author={Grubbs, Frank E},
+  journal={The Annals of Mathematical Statistics},
+  pages={27--58},
+  year={1950},
+  publisher={JSTOR}
+}
+
+@Article{guo_2006,
+  title={Pooled analysis of data from multiple quantitative trait locus mapping populations},
+  author={Guo, B and Sleper, DA and Sun, J and Nguyen, HT and Arelli, PR and Shannon, JG},
+  journal={Theoretical and applied genetics},
+  volume={113},
+  number={1},
+  pages={39--48},
+  year={2006},
+  publisher={Springer}
+}
+
+@article{haldane1919combination,
+  title={The combination of linkage values and the calculation of distances between the loci of linked factors},
+  author={Haldane, JBS},
+  journal={J Genet},
+  volume={8},
+  number={29},
+  pages={299--309},
+  year={1919}
+}
+
+@Article{haley_1992,
+  title={A simple regression method for mapping quantitative trait loci in line crosses using flanking markers},
+  author={Haley, Chris S and Knott, Sarah A},
+  journal={Heredity},
+  volume={69},
+  number={4},
+  pages={315--324},
+  year={1992}
+}
+
+@Article{han2015choice,
+  title={Choice of models for QTL mapping with multiple families and design of the training set for prediction of Fusarium resistance traits in maize},
+  author={Han, Sen and Utz, H Friedrich and Liu, Wenxin and Schrag, Tobias A and Stange, Michael and W{\"u}rschum, Tobias and Miedaner, Thomas and Bauer, Eva and Sch{\"o}n, Chris-Carolin and Melchinger, Albrecht E},
+  journal={Theoretical and Applied Genetics},
+  pages={1--14},
+  year={2015},
+  publisher={Springer}
+}
+
+@article{haseman1972investigation,
+  title={The investigation of linkage between a quantitative trait and a marker locus},
+  author={Haseman, JK and Elston, RC},
+  journal={Behavior genetics},
+  volume={2},
+  number={1},
+  pages={3--19},
+  year={1972},
+  publisher={Springer}
+}
+
+@article{huang2011analysis,
+  title={Analysis of natural allelic variation in Arabidopsis using a multiparent recombinant inbred line population},
+  author={Huang, Xueqing and Paulo, Maria-Jo{\~a}o and Boer, Martin and Effgen, Sigi and Keizer, Paul and Koornneef, Maarten and van Eeuwijk, Fred A},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={108},
+  number={11},
+  pages={4488--4493},
+  year={2011},
+  publisher={National Acad Sciences}
+}
+
+@article{huang2012multiparent,
+  title={A multiparent advanced generation inter-cross population for genetic analysis in wheat},
+  author={Huang, Bevan E and George, Andrew W and Forrest, Kerrie L and Kilian, Andrzej and Hayden, Matthew J and Morell, Matthew K and Cavanagh, Colin R},
+  journal={Plant biotechnology journal},
+  volume={10},
+  number={7},
+  pages={826--839},
+  year={2012},
+  publisher={Wiley Online Library}
+}
+
+
+@Manual{JabRef_software,
+  title = {JabRef},
+  author = {{JabRef Development Team}},
+  year = {2016},
+  url = {http://www.jabref.org}
+}
+
+
+@Article{jannink_2003,
+  title={Estimating allelic number and identity in state of QTLs in interconnected families},
+  author={Jannink, Jean-luc and Wu, Xiao-Lin},
+  journal={Genetical research},
+  volume={81},
+  number={02},
+  pages={133--144},
+  year={2003},
+  publisher={Cambridge Univ Press}
+}
+
+@Article{jansen_2003,
+  title={Mapping quantitative trait loci in plant breeding populations},
+  author={Jansen, Ritsert C and Jannink, Jean-Luc and Beavis, William D},
+  journal={Crop Science},
+  volume={43},
+  number={3},
+  pages={829--834},
+  year={2003},
+  publisher={Crop Science Society of America}
+}
+
+@Article{jourjon_2005,
+  title={MCQTL: multi-allelic QTL mapping in multi-cross design},
+  author={Jourjon, Marie-Fran{\c{c}}oise and Jasson, Sylvain and Marcel, Jacques and Ngom, Baba and Mangin, Brigitte},
+  journal={Bioinformatics},
+  volume={21},
+  number={1},
+  pages={128--130},
+  year={2005},
+  publisher={Oxford Univ Press}
+}
+
+@Article{kohler_1982,
+  title={The Relation Among the Likelihood Ratio-, Wald-, and Lagrange Multiplier Tests and Their Applicability to Small Samples},
+  author={Kohler, Daniel F},
+  year={1982},
+  publisher={Rand Corporation}
+}
+
+@Article{kover_2009,
+  title={A multiparent advanced generation inter-cross to fine-map quantitative traits in Arabidopsis thaliana},
+  author={Kover, Paula X and Valdar, William and Trakalo, Joseph and Scarcelli, Nora and Ehrenreich, Ian M and Purugganan, Michael D and Durrant, Caroline and Mott, Richard and others},
+  journal={PLoS Genet},
+  volume={5},
+  number={7},
+  pages={e1000551},
+  year={2009}
+}
+
+@Article{land_1989,
+  title={Mapping mendelian factors underlying quantitative traits using RFLP linkage maps.},
+  author={Lander, Eric S and Botstein, David},
+  journal={Genetics},
+  volume={121},
+  number={1},
+  pages={185--199},
+  year={1989},
+  publisher={Genetics Soc America}
+}
+
+@Article{lehermeier_2014,
+  title={Usefulness of multiparental populations of maize (Zea mays L.) for genome-based prediction},
+  author={Lehermeier, Christina and Kr{\"a}mer, Nicole and Bauer, Eva and Bauland, Cyril and Camisan, Christian and Campo, Laura and Flament, Pascal and Melchinger, Albrecht E and Menz, Monica and Meyer, Nina and others},
+  journal={Genetics},
+  volume={198},
+  number={1},
+  pages={3--16},
+  year={2014},
+  publisher={Genetics Soc America}
+}
+
+
+
+
+@Article{leroux_2014,
+  title={Clusthaplo: a plug-in for MCQTL to enhance QTL detection using ancestral alleles in multi-cross design},
+  author={Leroux, Damien and Rahmani, Abdelaziz and Jasson, Sylvain and Ventelon, Marjolaine and Louis, Florence and Moreau, Laurence and Mangin, Brigitte},
+  journal={Theoretical and Applied Genetics},
+  volume={127},
+  number={4},
+  pages={921--933},
+  year={2014},
+  publisher={Springer}
+}
+
+@Article{li_2005,
+  title={Combining data from multiple inbred line crosses improves the power and resolution of quantitative trait loci mapping},
+  author={Li, Renhua and Lyons, Malcolm A and Wittenburg, Henning and Paigen, Beverly and Churchill, Gary A},
+  journal={Genetics},
+  volume={169},
+  number={3},
+  pages={1699--1709},
+  year={2005},
+  publisher={Genetics Soc America}
+}
+
+@Article{li_2005_haplo,
+  title={Haplotype-based linkage disequilibrium mapping via direct data mining},
+  author={Li, Jing and Jiang, Tao},
+  journal={Bioinformatics},
+  volume={21},
+  number={24},
+  pages={4384--4393},
+  year={2005},
+  publisher={Oxford Univ Press}
+}
+
+@Article{li_2011_joint,
+  title={Joint QTL linkage mapping for multiple-cross mating design sharing one common parent},
+  author={Li, Huihui and Bradbury, Peter and Ersoz, Elhan and Buckler, Edward S and Wang, Jiankang},
+  journal={PLoS One},
+  volume={6},
+  number={3},
+  pages={e17573},
+  year={2011},
+  publisher={Public Library of Science}
+}
+
+@Article{liu_2012,
+  title={Comparison of biometrical approaches for QTL detection in multiple segregating families},
+  author={Liu, Wenxin and Reif, Jochen C and Ranc, Nicolas and Della Porta, Giovanni and W{\"u}rschum, Tobias},
+  journal={Theoretical and Applied Genetics},
+  volume={125},
+  number={5},
+  pages={987--998},
+  year={2012},
+  publisher={Springer}
+}
+
+@Book{malecot_1948,
+  title={Les math{\'e}matiques de l'h{\'e}r{\'e}dit{\'e}},
+  author={Mal{\'e}cot, Gustave},
+  year={1948},
+  publisher={Masson}
+}
+
+@article{meuwissen2002fine,
+  title={Fine mapping of a quantitative trait locus for twinning rate using combined linkage and linkage disequilibrium mapping},
+  author={Meuwissen, Theo HE and Karlsen, Astrid and Lien, Sigbj{\o}rn and Olsaker, Ingrid and Goddard, Mike E},
+  journal={Genetics},
+  volume={161},
+  number={1},
+  pages={373--379},
+  year={2002},
+  publisher={Genetics Soc America}
+}
+
+@Book{mcculloch2001,
+  title={Generalized, linear, and mixed models},
+  author={McCulloch, Charles E and Searle, Shayle R},
+  year={2001},
+  publisher={Wiley Online Library}
+}
+
+@Article{mcmullen_2009,
+  title={Genetic properties of the maize nested association mapping population},
+  author={McMullen, Michael D and Kresovich, Stephen and Villeda, Hector Sanchez and Bradbury, Peter and Li, Huihui and Sun, Qi and Flint-Garcia, Sherry and Thornsberry, Jeffry and Acharya, Charlotte and Bottoms, Christopher and others},
+  journal={Science},
+  volume={325},
+  number={5941},
+  pages={737--740},
+  year={2009},
+  publisher={American Association for the Advancement of Science}
+}
+
+
+@Article{meuw_1992,
+  title={Computing inbreeding coefficients in large populations},
+  author={Luo, Z and others},
+  journal={Genetics Selection Evolution},
+  volume={24},
+  number={4},
+  pages={305--313},
+  year={1992},
+  publisher={EDP Sciences}
+}
+
+@Article{muranty_1996,
+  title={Power of tests for quantitative trait loci detection using full-sib families in different schemes},
+  author={Muranty, Helene},
+  journal={Heredity},
+  volume={76},
+  number={2},
+  pages={156--165},
+  year={1996},
+  publisher={London: Oliver and Boyd, 1947-}
+}
+
+@Article{myles_2009,
+  title={Association mapping: critical considerations shift from genotyping to experimental design},
+  author={Myles, Sean and Peiffer, Jason and Brown, Patrick J and Ersoz, Elhan S and Zhang, Zhiwu and Costich, Denise E and Buckler, Edward S},
+  journal={The Plant Cell},
+  volume={21},
+  number={8},
+  pages={2194--2202},
+  year={2009},
+  publisher={Am Soc Plant Biol}
+}
+
+@Article{nei_1979,
+  title={Mathematical model for studying genetic variation in terms of restriction endonucleases},
+  author={Nei, Masatoshi and Li, Wen-Hsiung},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={76},
+  number={10},
+  pages={5269--5273},
+  year={1979},
+  publisher={National Acad Sciences}
+}
+
+@Article{nicholson_2002,
+  title={Assessing population differentiation and isolation from single-nucleotide polymorphism data},
+  author={Nicholson, George and Smith, Albert V and J{\'o}nsson, Frosti and G{\'u}stafsson, {\'O}mar and Stef{\'a}nsson, K{\'a}ri and Donnelly, Peter},
+  journal={Journal of the Royal Statistical Society: Series B (Statistical Methodology)},
+  volume={64},
+  number={4},
+  pages={695--715},
+  year={2002},
+  publisher={Wiley Online Library}
+}
+
+@Article{ogut2015,
+  title={Joint-multiple family linkage analysis predicts within-family variation better than single-family analysis of the maize nested association mapping population},
+  author={Ogut, Funda and Bian, Yang and Bradbury, Peter J and Holland, James B},
+  journal={Heredity},
+  volume={114},
+  number={6},
+  pages={552--563},
+  year={2015},
+  publisher={Nature Publishing Group}
+}
+
+
+
+@Article{orel_1998,
+  title={Empirical genetic laws published in Brno before Mendel was born},
+  author={Orel, Y and Wood, RJ},
+  journal={Journal of Heredity},
+  volume={89},
+  number={1},
+  pages={79--82},
+  year={1998},
+  publisher={Am Genetic Assoc}
+}
+
+@Article{powell_2010,
+  title={Reconciling the analysis of IBD and IBS in complex trait studies},
+  author={Powell, Joseph E and Visscher, Peter M and Goddard, Michael E},
+  journal={Nature Reviews Genetics},
+  volume={11},
+  number={11},
+  pages={800--805},
+  year={2010},
+  publisher={Nature Publishing Group}
+}
+
+@Manual{R_Core,
+    title = {R: A Language and Environment for Statistical Computing},
+    author = {{R Core Team}},
+    organization = {R Foundation for Statistical Computing},
+    address = {Vienna, Austria},
+    year = {2016},
+    url = {https://www.R-project.org/},
+  }
+
+
+@Book{rao_2008, 
+title={Linear Models and Generalizations: Least Squares and Alternatives},
+author={C. Radhakrishna Rao and Helge Toutenburg and Shalabh and Christian Heumann},
+year={2008},
+publisher={Springer}
+}
+
+@Article{rebai_1993,
+  title={Power of tests for QTL detection using replicated progenies derived from a diallel cross},
+  author={Reba{\"i}, Ahmed and Goffinet, Bruno},
+  journal={Theoretical and Applied Genetics},
+  volume={86},
+  number={8},
+  pages={1014--1022},
+  year={1993},
+  publisher={Springer}
+}
+
+
+@Article{rebai_2000,
+  title={More about quantitative trait locus mapping with diallel designs},
+  author={Reba{\"i}, Ahmed and Goffinet, Bruno},
+  journal={Genetical research},
+  volume={75},
+  number={02},
+  pages={243--247},
+  year={2000},
+  publisher={Cambridge Univ Press}
+}
+
+
+@Article{rosenberg_2002,
+  title={Genealogical trees, coalescent theory and the analysis of genetic polymorphisms},
+  author={Rosenberg, Noah A and Nordborg, Magnus},
+  journal={Nature Reviews Genetics},
+  volume={3},
+  number={5},
+  pages={380--390},
+  year={2002},
+  publisher={Nature Publishing Group}
+}
+
+@Article{schwegler_2013,
+  title={Multiple-line cross quantitative trait locus mapping in sugar beet (Beta vulgaris L.)},
+  author={Schwegler, Diana D and Liu, Wenxin and Gowda, Manje and W{\"u}rschum, Tobias and Schulz, Britta and Reif, Jochen C},
+  journal={Molecular breeding},
+  volume={31},
+  number={2},
+  pages={279--287},
+  year={2013},
+  publisher={Springer}
+}
+
+@Article{speed_2012,
+  title={Improved heritability estimation from genome-wide SNPs},
+  author={Speed, Doug and Hemani, Gibran and Johnson, Michael R and Balding, David J},
+  journal={The American Journal of Human Genetics},
+  volume={91},
+  number={6},
+  pages={1011--1021},
+  year={2012},
+  publisher={Elsevier}
+}
+
+
+@Article{steinhoff_2011,
+  title={Multiple-line cross quantitative trait locus mapping in European elite maize},
+  author={Steinhoff, Jana and Liu, Wenxin and Maurer, Hans Peter and W{\"u}rschum, Tobias and Friedrich, C and Longin, H and Ranc, Nicolas and Reif, Jochen C},
+  journal={Crop science},
+  volume={51},
+  number={6},
+  pages={2505--2516},
+  year={2011},
+  publisher={The Crop Science Society of America, Inc.}
+}
+
+@Article{steinhoff_2012a,
+  title={Detection of QTL for flowering time in multiple families of elite maize},
+  author={Steinhoff, Jana and Liu, Wenxin and Reif, Jochen C and Della Porta, Giovanni and Ranc, Nicolas and W{\"u}rschum, Tobias},
+  journal={Theoretical and Applied Genetics},
+  volume={125},
+  number={7},
+  pages={1539--1551},
+  year={2012},
+  publisher={Springer}
+}
+
+
+@Article{sun_2010,
+  title={Variation explained in mixed-model association mapping},
+  author={Sun, G and Zhu, C and Kramer, MH and Yang, SS and Song, W and Piepho, HP and Yu, J},
+  journal={Heredity},
+  volume={105},
+  number={4},
+  pages={333--340},
+  year={2010},
+  publisher={Nature Publishing Group}
+}
+
+@Article{ter_2010,
+  title={Identity-by-descent matrix decomposition using latent ancestral allele models},
+  author={Ter Braak, Cajo JF and Boer, Martin P and Totir, L Radu and Winkler, Christopher R and Smith, Oscar S and Bink, Marco CAM},
+  journal={Genetics},
+  volume={185},
+  number={3},
+  pages={1045--1057},
+  year={2010},
+  publisher={Genetics Soc America}
+}
+
+@Article{utz_2000,
+  title={Bias and sampling error of the estimated proportion of genotypic variance explained by quantitative trait loci determined from experimental data in maize using cross validation and validation with independent samples},
+  author={Utz, H Friedrich and Melchinger, Albrecht E and Sch{\"o}n, Chris C},
+  journal={Genetics},
+  volume={154},
+  number={4},
+  pages={1839--1849},
+  year={2000},
+  publisher={Genetics Soc America}
+}
+
+@Article{van_2010,
+  title={Mixed model approaches for the identification of QTLs within a maize hybrid breeding program},
+  author={van Eeuwijk, Fred A and Boer, Martin and Totir, L Radu and Bink, Marco and Wright, Deanne and Winkler, Christopher R and Podlich, Dean and Boldman, Keith and Baumgarten, Andy and Smalley, Matt and others},
+  journal={Theoretical and applied genetics},
+  volume={120},
+  number={2},
+  pages={429--440},
+  year={2010},
+  publisher={Springer}
+}
+
+
+@article{varshney2015analytical,
+  title={Analytical and decision support tools for genomics-assisted breeding},
+  author={Varshney, Rajeev K and Singh, Vikas K and Hickey, John M and Xun, Xu and Marshall, David F and Wang, Jun and Edwards, David and Ribaut, Jean-Marcel},
+  journal={Trends in plant science},
+  year={2015},
+  publisher={Elsevier}
+}
+
+
+@Article{verhoeven_2006,
+  title={Using mating designs to uncover QTL and the genetic architecture of complex traits},
+  author={Verhoeven, KJF and Jannink, JL and McIntyre, LM},
+  journal={Heredity},
+  volume={96},
+  number={2},
+  pages={139--149},
+  year={2006},
+  publisher={Nature Publishing Group}
+}
+
+@Article{wald_1943,
+  title={Tests of statistical hypotheses concerning several parameters when the number of observations is large},
+  author={Wald, Abraham},
+  journal={Transactions of the American Mathematical society},
+  volume={54},
+  number={3},
+  pages={426--482},
+  year={1943},
+  publisher={JSTOR}
+}
+
+@Article{walling_2000,
+  title={Combined analyses of data from quantitative trait loci mapping studies: chromosome 4 effects on porcine growth and fatness},
+  author={Walling, Grant A and Visscher, Peter M and Andersson, Leif and Rothschild, Max F and Wang, Lizhen and Moser, Gerhard and Groenen, Martien AM and Bidanel, Jean-Pierre and Cepica, Stanislav and Archibald, Alan L and others},
+  journal={Genetics},
+  volume={155},
+  number={3},
+  pages={1369--1378},
+  year={2000},
+  publisher={Genetics Soc America}
+}
+
+@Article{weeks_1964,
+  title={A note on the determination of connectedness in an N-way cross classification},
+  author={Weeks, David L and Williams, Donald R},
+  journal={Technometrics},
+  volume={6},
+  number={3},
+  pages={319--324},
+  year={1964},
+  publisher={Taylor \& Francis}
+}
+
+@Article{wei_2015,
+  title={A Random Model Approach to QTL Mapping in Multi-parent Advanced Generation Inter-cross (MAGIC) Populations},
+  author={Wei, Julong and Xu, Shizhong},
+  journal={Genetics},
+  pages={genetics--115},
+  year={2015},
+  publisher={Genetics Soc America}
+}
+
+
+@Article{wurschum_2012_comp,
+  title={Comparison of biometrical models for joint linkage association mapping},
+  author={W{\"u}rschum, T and Liu, W and Gowda, M and Maurer, HP and Fischer, S and Schechert, A and Reif, JC},
+  journal={Heredity},
+  volume={108},
+  number={3},
+  pages={332--340},
+  year={2012},
+  publisher={Nature Publishing Group}
+}
+
+@Article{wurschum_2012_fam,
+  title={Mapping QTL for agronomic traits in breeding populations},
+  author={W{\"u}rschum, Tobias},
+  journal={Theoretical and Applied Genetics},
+  volume={125},
+  number={2},
+  pages={201--210},
+  year={2012},
+  publisher={Springer}
+}
+
+@Article{xavierNAM2015,
+    title = {{NAM}: association studies in multiple populations},
+    author = {Alencar Xavier and Shizhong Xu and William Muir and Katy Rainey},
+    journal = {Bioinformatics},
+    publisher = {Oxford University Press},
+    year = {2015},
+    pages = {btv448},
+  }
+
+@Article{xie_1998,
+  title={Combining different line crosses for mapping quantitative trait loci using the identical by descent-based variance component method},
+  author={Xie, Chongqing and Gessler, Damian DG and Xu, Shizhong},
+  journal={Genetics},
+  volume={149},
+  number={2},
+  pages={1139--1146},
+  year={1998},
+  publisher={Genetics Soc America}
+}
+
+@Article{xu_1995,
+  title={A random model approach to interval mapping of quantitative trait loci.},
+  author={Xu, Shizhong and Atchley, William R},
+  journal={Genetics},
+  volume={141},
+  number={3},
+  pages={1189--1197},
+  year={1995},
+  publisher={Genetics Soc America}
+}
+
+
+@Article{xu_1998,
+  title={Mapping quantitative trait loci using multiple families of line crosses},
+  author={Xu, Shizhong},
+  journal={Genetics},
+  volume={148},
+  number={1},
+  pages={517--524},
+  year={1998},
+  publisher={Genetics Soc America}
+}
+
+@Article{yang_2010,
+  title={Common SNPs explain a large proportion of the heritability for human height},
+  author={Yang, Jian and Benyamin, Beben and McEvoy, Brian P and Gordon, Scott and Henders, Anjali K and Nyholt, Dale R and Madden, Pamela A and Heath, Andrew C and Martin, Nicholas G and Montgomery, Grant W and others},
+  journal={Nature genetics},
+  volume={42},
+  number={7},
+  pages={565--569},
+  year={2010},
+  publisher={Nature Publishing Group}
+}
+
+@Article{yang_2014,
+  title={Advantages and pitfalls in the application of mixed-model association methods},
+  author={Yang, Jian and Zaitlen, Noah A and Goddard, Michael E and Visscher, Peter M and Price, Alkes L},
+  journal={Nature genetics},
+  volume={46},
+  number={2},
+  pages={100--106},
+  year={2014},
+  publisher={Nature Publishing Group}
+}
+
+@Article{yi_2001bayesian,
+  title={Bayesian mapping of quantitative trait loci under complicated mating designs},
+  author={Yi, Nengjun and Xu, Shizhong},
+  journal={Genetics},
+  volume={157},
+  number={4},
+  pages={1759--1771},
+  year={2001},
+  publisher={Genetics Soc America}
+}
+
+@Article{yu_2006,
+  title={A unified mixed-model method for association mapping that accounts for multiple levels of relatedness},
+  author={Yu, Jianming and Pressoir, Gael and Briggs, William H and Bi, Irie Vroh and Yamasaki, Masanori and Doebley, John F and McMullen, Michael D and Gaut, Brandon S and Nielsen, Dahlia M and Holland, James B and others},
+  journal={Nature genetics},
+  volume={38},
+  number={2},
+  pages={203--208},
+  year={2006},
+  publisher={Nature Publishing Group}
+}
+
+@Article{yu_2008_NAM,
+  title={Genetic design and statistical power of nested association mapping in maize},
+  author={Yu, Jianming and Holland, James B and McMullen, Michael D and Buckler, Edward S},
+  journal={Genetics},
+  volume={178},
+  number={1},
+  pages={539--551},
+  year={2008},
+  publisher={Genetics Soc America}
+}
+
+@Article{zeng_1993,
+  title={Theoretical basis for separation of multiple linked gene effects in mapping quantitative trait loci},
+  author={Zeng, Zhao-Bang},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={90},
+  number={23},
+  pages={10972--10976},
+  year={1993},
+  publisher={National Acad Sciences}
+}
+
+@Article{zeng_1994,
+  title={Precision mapping of quantitative trait loci.},
+  author={Zeng, Zhao-Bang},
+  journal={Genetics},
+  volume={136},
+  number={4},
+  pages={1457--1468},
+  year={1994},
+  publisher={Genetics Soc America}
+}
+
+@Article{zheng2014general,
+  title={A general modeling framework for genome ancestral origins in multiparental populations},
+  author={Zheng, Chaozhi and Boer, Martin P and van Eeuwijk, Fred A},
+  journal={Genetics},
+  volume={198},
+  number={1},
+  pages={87--101},
+  year={2014},
+  publisher={Genetics Soc America}
+}
+
+@Article{zheng2015reconstruction,
+  title={Reconstruction of genome ancestry blocks in multiparental populations},
+  author={Zheng, Chaozhi and Boer, Martin P and van Eeuwijk, Fred A},
+  journal={Genetics},
+  volume={200},
+  number={4},
+  pages={1073--1087},
+  year={2015},
+  publisher={Genetics Soc America}
+}
+
+@Article{,
+  author =    {Alencar Xavier and Shizhong Xu and William Muir and Katy Rainey},
+  title =     {{NAM}: {A}ssociation {S}tudies in {M}ultiple {P}opulations},
+  journal =   {Bioinformatics},
+  year =      {2015},
+  pages =     {btv448},
+  publisher = {Oxford University Press}
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
