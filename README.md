@@ -8,8 +8,10 @@ mppR is an R package to perform QTL analysis of experimental multi-parent popula
 
 ## Installation
 
+mppR has two different branches: "master" and "mppR_CRAN". The "master" branch allows to perform MPP mixed model QTL detection calling the asreml-R package and function parent_cluster.mppData that call the archived R package clusthaplo for parent clustering. The branch "mppR_CRAN" do not contain the mixed models and the call to clusthaplo.
+
 ```
-devtools::install_github("vincentgarin/mppR")
+devtools::install_github("vincentgarin/mppR", ref = "master")
 
 ```
 
@@ -20,3 +22,4 @@ devtools::install_github("vincentgarin/mppR")
 # Travis
 
 [![Travis-CI Build Status](https://travis-ci.org/vincentgarin/mppR.svg?branch=master,mppR_CRAN)](https://travis-ci.org/vincentgarin/mppR)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/mppR)](https://cran.r-project.org/package=mppR)

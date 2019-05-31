@@ -1,4 +1,5 @@
 ### R code from vignette source 'mppR_vignette.rnw'
+### Encoding: ISO8859-1
 
 ###################################################
 ### code chunk number 1: package_load

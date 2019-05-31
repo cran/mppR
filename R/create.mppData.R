@@ -26,7 +26,9 @@
 #' @param map Three columns \code{data.frame} with: 1) \code{character} marker
 #' identifiers; 2) \code{numeric} chromosome; 3) \code{numeric} positions in
 #' centi-Morgan.\strong{The marker identifiers must be identical to the column
-#' names of the maker matrices (\code{geno.off} and \code{geno.par}).}
+#' names of the maker matrices (\code{geno.off} and \code{geno.par}).
+#' The chromosome identifiers must start by 1 and increase by 1 unit,
+#' e.g. 1, 2, 3, ...}
 #' 
 #' @param pheno \code{Numeric matrix} with one column per trait and rownames
 #' as genotypes identifiers. \strong{The genotypes identifiers must be identical
@@ -91,7 +93,6 @@
 #' @import grDevices
 #' @import graphics
 #' @import igraph
-#' @import synbreed
 #' @importFrom stats anova as.formula coef complete.cases cor df.residual lm
 #' @importFrom stats model.matrix pchisq pt quantile runif vcov                           
 #' 
@@ -163,6 +164,17 @@ create.mppData <- function(geno.off = NULL, geno.par = NULL, map = NULL,
   if(!is.numeric(map[, 2])){
     
     stop("the chromosome in 'map' must be numeric")
+    
+  }
+  
+  # test that chr. id goes from 1 to n_cr increasing by one
+  
+  chr_id <- unique(map[, 2])
+  chr_ref <- 1:length(chr_id)
+  
+  if(!identical(chr_id, chr_ref)){
+    
+    stop("the chromosome identifier in 'map' must start by 1 and increase by 1 unit, e.g. 1, 2, 3, ...")
     
   }
   

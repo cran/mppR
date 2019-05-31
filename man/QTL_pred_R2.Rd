@@ -4,8 +4,8 @@
 \alias{QTL_pred_R2}
 \title{Predicted QTL global and partial R squared}
 \usage{
-QTL_pred_R2(mppData.ts, mppData.vs, trait = 1, Q.eff = "cr", QTL = NULL,
-  her = 1)
+QTL_pred_R2(mppData.ts, mppData.vs, trait = 1, Q.eff = "cr",
+  QTL = NULL, her = 1)
 }
 \arguments{
 \item{mppData.ts}{An object of class \code{mppData} for the training set.}

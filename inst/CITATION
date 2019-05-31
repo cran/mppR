@@ -1,14 +1,9 @@
 citHeader("To cite the mppR package in publications use:")
 
-citEntry(entry="Article",
-	title="How do the type of QTL effect and the form of the residual term influence QTL detection in multi-parent populations? A case study in the maize EU-NAM population",
-	author=as.person(c("Garin V", "Wimmer V", "Mezmouk S", "Malosetti M", "van Eeuwijk F")),
-	journal="Theoretical and Applied Genetics",
-	volume=130,
-	number=8,
-	pages="1-12",
-	year=2017,
-	publisher="Springer",
-textVersion=paste("Garin V, Wimmer V, Mezmouk S, Malosetti M, van Eeuwijk F (2017). How do the type of QTL effect and the form of the residual term influence QTL detection in multi-parent populations? A case study in the maize EU-NAM population.",
-"Theoretical and Applied Genetics 130(8):1-12.")
+citEntry(entry="Manual",
+	title="mppR: Multi-Parent Population QTL Analysis",
+	author=as.person(c("Garin V", "Wimmer V", "Borchardt D", "van Eeuwijk F", "Malosetti M")),
+	note="R package version 1.2.0",
+	year=2018,url="https://CRAN.R-project.org/package=mppR",
+textVersion=paste("Garin V, Wimmer V, Borchardt D, Malosetti M, van Eeuwijk F (2018). mppR: Multi-Parent Population QTL Analysis.", "R package version 1.2.0")
 )

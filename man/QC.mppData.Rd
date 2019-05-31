@@ -36,8 +36,8 @@ segregation rate within cross (\code{MAF.cr.lim}) should be put as missing
 Default = TRUE.}
 
 \item{MAF.cr.lim2}{\code{Numeric}. Alternative option for marker MAF
-filtering. Only markers segregating with a MAF larger than \code{MAF.cr/lim2}
-will be kept for the analysis. Default = NULL.}
+filtering. Only markers segregating with a MAF larger than \code{MAF.cr.lim2}
+in at least one cross will be kept for the analysis. Default = NULL.}
 
 \item{verbose}{\code{Logical} value indicating if the steps of the QC should
 be printed. Default = TRUE.}

@@ -82,7 +82,7 @@ IncMat_QTL_MAF <- function(QTL, Q.eff_i, Q.pos_i, mppData, ref.par = NULL){
       } else {
         
         Q.mat <- cbind(Q.mat, QTL_i[, names(sort(all.freq))])
-        allele_ord_i <- names(sort(all.freq, decreasing = TRUE))
+        allele_ord_i <- rev(colnames(Q.mat))
         
       }
       

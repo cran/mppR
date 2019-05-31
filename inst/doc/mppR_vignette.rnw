@@ -61,11 +61,7 @@
 %% in the following format:
 
 \Address{Vincent Garin \\
-	Biometris \\
-	Wageningen University and research Center
-	P.O Box 100, 6700AC Wageningen, The Netherlands.\\
-	E-mail: \email{vincent.garin@wur.nl}\\
-	Telephone : +31/317/483-574
+	E-mail: \email{vincent.garin6@gmail.com}\\
 }
 
 %% It is also possible to add a telephone and fax number
@@ -80,6 +76,7 @@
 
 
 \begin{document}
+%\SweaveOpts{concordance=TRUE}
 \SweaveOpts{engine=R, eps=FALSE, keep.source = TRUE}
 
 \section{Introduction}
@@ -87,20 +84,20 @@
 % Software package are cited \cite{}d
 
 
-Quantitative trait locus (QTL) analysis essentially consists in finding a relationship between DNA polymorphisms (e.g., SNPs) and phenotypic variation \citep{doerge_mapping:2002}. QTL detection methods greatly depends on the genetic properties of the population that is used. Historically, QTL detection has been performed in designed experimental populations involving two parental lines (bi-parental crosses). Several methods and software packages have been developed for QTL analysis for such populations, for a review see \citet{varshney2015analytical}. Multi-parent populations (MPPs) are an alternative type of population that can improve the chances of QTL detection while broadening the range of research questions that can be answered \citep{cavanagh2008mutations}. MPPs can be seen as a compromise between bi-parental crosses and association panels \citep{myles_2009}. Different types of MPPs have been developed including nested association mapping (NAM) populations \citep{mcmullen_2009}, diallels \citep{blanc_2006} and factorial designs \citep{bardol_2013}. More complicated MPPs can be created by intercrossing multiple founders followed by inbreeding, like in multi-parent advanced generation inter-cross (MAGIC) populations \citep{cavanagh2008mutations}. Here, we consider MPPs as a collection of genotypes that are derived by crosses between at least three different parents. In this paper, a MPP QTL analysis is akin to the joint analysis of such a population using a common marker map.
+Quantitative trait locus (QTL) analysis essentially consists in finding a relationship between DNA polymorphisms (e.g., SNPs) and phenotypic variation \citep{doerge2002mapping}. QTL detection methods greatly depends on the genetic properties of the population that is used. Historically, QTL detection has been performed in designed experimental populations involving two parental lines (bi-parental crosses). Several methods and software packages have been developed for QTL analysis for such populations, for a review see \citet{varshney2015analytical}. Multi-parent populations (MPPs) are an alternative type of population that can improve the chances of QTL detection while broadening the range of research questions that can be answered \citep{cavanagh2008mutations}. MPPs can be seen as a compromise between bi-parental crosses and association panels \citep{myles_2009}. Different types of MPPs have been developed including nested association mapping (NAM) populations \citep{mcmullen_2009}, diallels \citep{blanc_2006} and factorial designs \citep{bardol_2013}. More complicated MPPs can be created by intercrossing multiple founders followed by inbreeding, like in multi-parent advanced generation inter-cross (MAGIC) populations \citep{cavanagh2008mutations}. Here, we consider MPPs as a collection of genotypes that are derived by crosses between at least three different parents. In this paper, a MPP QTL analysis is akin to the joint analysis of such a population using a common marker map.
 
 
 The development of an appropriate statistical methodology taking MPP properties into consideration is a \textit{sine qua non} condition to fully exploit the potential of MPP genetic resources. The most critical question is how to account for genetic relatedness between the genotypes and how to integrate this information into the statistical model. A first simple option is to treat MPPs as an association mapping panel and to apply genome-wide association study (GWAS) QTL detection methods. 
 
 The use of a GWAS type of method presents several advantages. First, GWAS methods apply to almost any type of MPP design because the knowledge of population structure is not a prerequisite. The GWAS QTL detection is marker-based, that is, uses identity by state (IBS) information, and so generally only allows for two alleles at each tested position. A second advantage is the existence of powerful algorithms (e.g. EMMA - \citet{kang2008efficient}) that allow to scan in a reasonable amount of time large marker datasets. Finally, GWAS analyses are also based on sets of well-developed mixed models \citep{yu_2006}. These models allow to account for the population structure and the polygenic effect using a kinship matrix covering the relations between all genotypes from all populations \citep{van2010detection, rincent2014recovering}. MPP GWAS type of QTL detection can be performed using packages like \pkg{TASSEL} \citep{bradbury2007tassel} the \proglang{R} library \pkg{GAPIT} \citep{gapit2012} or the \proglang{R} packages \pkg{GenABEL} \citep{genabel2007} and \pkg{Sommer} \citep{covarrubias_sommer_2016}.
 
-However, a major limitation of GWAS methods is that they generally use bi-allelic marker models assuming two classes of effects at the QTL position. The bi-allelic assumption represents therefore a risk of failing to reflect the allele diversity potentially present at the QTLs within MPPs \citep{garin2017type}. Indeed, several factors like multiple alleles, differential linkage phase between marker and QTL alleles per cross, or interaction effects between the QTL and genetic background may cause complex allelic series.
+However, a major limitation of GWAS methods is that they generally use bi-allelic marker models assuming two classes of effects at the QTL position. The bi-allelic assumption represents therefore a risk of failing to reflect the allele diversity potentially present at the QTLs within MPPs \citep{garin2017type}. Indeed, several factors like multiple alleles, cross-specific linkage phase between marker and QTL alleles, or interaction effects between the QTL and genetic background may cause complex allelic series.
 
-Other approaches use available pedigree information to model or infer DNA transmission to the final lines starting from a set of parents or ancestors. This strategy make use of identity by descent (IBD) information and gives model with more than two alleles, which can be more appropriate to model complex allelic series \citep{blanc_2006, xavierNAM2015}. For example, the \proglang{R} package \pkg{NAM} \citep{xavierNAM2015} proposes to take into consideration factors which can lead to complex allelic series like the difference of linkage phase association between marker and QTL in different crosses. \pkg{NAM} uses incidence matrices containing the number of alleles received per parent to estimate random QTL effects and to control for the polygenic background in the rest of the genome. The software package \pkg{MCQTL} \citep{jourjon_2005} functioning in a Linux environment is also an option. \pkg{MCQTL} combined with the \proglang{R} package \pkg{clusthaplo} \citep{leroux_2014} computes linear models with a various assumptions about the origin and number of QTL alleles (cross-specific, parental, or ancestral).
+Other approaches use available pedigree information to model or infer DNA transmission to the final lines starting from a set of parents or ancestors. This strategy make use of identity by descent (IBD) information and gives model with more than two alleles, which can be more appropriate to model complex allelic series \citep{blanc_2006, xavierNAM2015}. For example, the \proglang{R} package \pkg{NAM} \citep{xavierNAM2015} proposes to take into consideration factors which can lead to complex allelic series like the difference of linkage phase association between marker and QTL in different crosses. \pkg{NAM} uses incidence matrices containing the number of alleles received per parent to estimate random QTL effects and to control for the polygenic background in the rest of the genome. The software package \pkg{MCQTL} \citep{jourjon_2005} functioning in a Linux environment is also an option. \pkg{MCQTL} combined with the \proglang{R} package \pkg{clusthaplo} \citep{leroux_2014} computes linear models with various assumptions about the origin and number of QTL alleles (cross-specific, parental, or ancestral).
 
 We add a the bi-allelic model and incorporate a cross-validation strategy to evaluate the QTL detection performance of the different models. We also developed a method to build multi-QTL (MQE) models that allows QTLs with different types of effects at different loci in contrast to the more rigid approach in \pkg{MCQTL} \citep{jourjon_2005} that assumes the same type of effect across the genome. In a nutshell, \pkg{mppR} fits a wide range of models with different assumptions about the QTL effects. The current version of \pkg{mppR} is based on the linear model. A more general version of \pkg{mppR} is available from the following GitHub repository \url{https://github.com/vincentgarin/mppR}. In a mixed model context, we can allow for heterogeneity of variance present in MPPs, and other sources of random variation and/or dependence existing between genotypes. The \pkg{mppR} components that are based on mixed model technology depend on the \pkg{ASReml-R} package \citep{asreml_2009} and require a license.
 
-This manual is organized as follows. Section~\ref{sec:2} describes the statistical methodology for the proposed MPP QTL detection procedures. Section~\ref{sec:3} illustrates in detail the QTL detection procedure describing the different functions and using a subset of the maize US-NAM population as example \citep{yu_2008_NAM, mcmullen_2009}.
+This manual is organized as follows. Section~\ref{sec:2} describes the statistical methodology for the proposed MPP QTL detection procedures. Section~\ref{sec:3} illustrates in details the QTL detection procedure describing the different functions using a subset of the maize US-NAM population as example \citep{yu_2008_NAM, mcmullen_2009}.
 
  
 \section{Statistical methodology}
@@ -109,10 +106,10 @@ This manual is organized as follows. Section~\ref{sec:2} describes the statistic
 
 \subsection{Connectivity}
 
-\pkg{mppR} allows to analyse any type of MPP design with minimally two crosses between at least three different parents. In such designs, the possibility to estimate QTL parameters (identifiability) is linked to the notion of connectivity of the design. It is always possible to estimate one effect per cross, making in total the number ($n_{c}$), which constitutes the largest number of QTL effects that can be estimated. The estimation of parental and ancestral effects is linked to the connectivity of the MPP design \citep{rebai_2000}. Taking for example the parental alleles, it is possible to estimate $n_{p} - 1 \leq  n_{c}$ parental alleles per connected part of the design. Design connectivity can be defined using graph theory \citep{weeks_1964}. Following graph theory, an MPP design can be represented by a graph where parents (alleles) are vertices or nodes and crosses are edges or lines (Figure \ref{fig:1}). A connected graph, is a graph where there exists a walk from any node $i$ to any other node $j$. For example, the MPP design in Figure (\ref{fig:1}) is composed of two connected parts. Ideally, MPP QTL analysis should be run using only connected populations. The joint analysis of an MPP composed of several disjunct but internally connected parts is still possible. In that case, connectedness could follow from the sharing of a common ancestor by two parents of the design. For example if parents $P_{B}$ and $P_{E}$ of the MPP design of Figure (\ref{fig:1}) would receive their allele from the same ancestor, the MPP design would consist of a single connected part. For a bi-allelic model we assume that the design is fully connected. In any case, even if disconnected part are analysed jointly, a minimal level of connection will be assumed by assuming that cofactors are shared in the whole population.
+\pkg{mppR} allows to analyse any type of MPP design with minimally two crosses between at least three different parents. In such designs, the possibility to estimate QTL parameters (identifiability) is linked to the notion of connectivity of the design. It is always possible to estimate one effect per cross. Therefore, the number crosses ($n_{c}$) constitutes the largest number of QTL effects that can be estimated. The estimation of parental and ancestral effects is linked to the connectivity of the MPP design \citep{rebai_2000}. Taking for example the parental alleles, it is possible to estimate $n_{p} - 1 \leq  n_{c}$ parental alleles per connected part of the design. Design connectivity can be defined using graph theory \citep{weeks_1964}. Following graph theory, an MPP design can be represented by a graph where parents (alleles) are vertices or nodes and crosses are edges or lines (Figure \ref{fig:1}). A connected graph, is a graph where there exists a walk from any node $i$ to any other node $j$. For example, the MPP design in Figure (\ref{fig:1}) is composed of two connected parts. Ideally, MPP QTL analysis should be run using only connected populations. The joint analysis of an MPP composed of several disjunct but internally connected parts is still possible. In that case, connectedness could follow from the sharing of a common ancestor by two parents of the design. For example if parents $P_{B}$ and $P_{E}$ of the MPP design of Figure (\ref{fig:1}) would receive their allele from the same ancestor, the MPP design would consist of a single connected part. For a bi-allelic model we assume that the design is fully connected. In any case, even if disconnected parts are analysed jointly, a minimal level of connection will be assumed by assuming that cofactors are shared in the whole population.
 
 \begin{figure}[!ht]
-	\includegraphics[width=1\textwidth,natwidth=610,natheight=642]{figures/connectivity_example.jpg}
+	\includegraphics[width=1\textwidth]{figures/connectivity_example.jpg}
 	\caption{Example of a MPP design represented as a graph}
 	\label{fig:1}
 \end{figure}
@@ -148,7 +145,7 @@ The QTL effect incidence matrix $\bm{X_{Q}}$ is the central term of the model. A
 \subsubsection{Cross-specific model}
 \label{cr.mod}
 
-The first model assumes that the QTL alleles that segregate within a particular cross are different from those that segregate in another cross. Under this assumption, QTL alleles are nested within crosses and so QTL effects are estimated per cross. In the cross-specific model, $x_{nl} \in [0, 2]$ represents the expected number of allele copies received from one of the cross parents given the flanking markers. The expected number of parental allele copies is estimated using IBD probabilities computed by the package \proglang{R}/\pkg{qtl} \citep{broman_rqtl}. These probabilities are estimated with respect to the parents of each cross. For illustration purpose, let us take the following example of a MPP analysis combining material coming from two crosses: cross 1 ($P_{A} \times P_{B}$) and cross 2 ($P_{A} \times P_{C}$). In that case, we ignore the fact that the two crosses are connected since they share a common parent $P_{A}$, therefore $\bm{X_{Q}}$ is a diagonal block structure with diagonal elements specifying the within cross allele origin. Model (\ref{eq:2}) can be re-written like that
+The first model assumes that the QTL alleles that segregate within a particular cross are different from those that segregate in another cross. Cross-specific QTL effects can be seen as parental alleles interacting with the cross genetic background. Under this assumption, QTL alleles are nested within crosses and so QTL effects are estimated per cross. In the cross-specific model, $x_{nl} \in [0, 2]$ represents the expected number of allele copies received from one of the cross parents given the flanking markers. The expected number of parental allele copies is estimated using IBD probabilities computed by the package \proglang{R}/\pkg{qtl} \citep{broman_rqtl}. These probabilities are estimated with respect to the parents of each cross. For illustration purpose, let us take the following example of a MPP analysis combining material coming from two crosses: cross 1 ($P_{A} \times P_{B}$) and cross 2 ($P_{A} \times P_{C}$). In that case, we ignore the fact that the two crosses are connected since they share a common parent $P_{A}$. Therefore $\bm{X_{Q}}$ is a diagonal block structure with diagonal elements specifying the within cross allele origin. Model (\ref{eq:2}) can be re-written like that
 
 \begin{equation}
  \label{eq:4}
@@ -172,9 +169,9 @@ It is not possible to estimate two effects per cross since the parental scores a
 \subsubsection{Parental model}
 \label{par.mod}
 
-In the cross-specific model, all crosses are considered unrelated. A second option is the parental model that adds the connection between crosses via the parents that are in common between crosses. In that case, the parental QTL incidence matrix is simply obtained by re-arranging the columns of model (\ref{eq:4}) taking into consideration the connections created by the use of common parents. This model estimates one allele effect per parental line, which is considered to be independent of the genetic background. The QTL effect of parent $p$ is assumed to be constant in all crosses where this parent has been used \citep{blanc_2006}.
+In the cross-specific model, all crosses are considered unrelated. A second option is the parental model that adds the connection between crosses via the parents shared between crosses. In that case, the parental QTL incidence matrix is simply obtained by re-arranging the columns of model (\ref{eq:4}) taking into consideration the connections created by the use of common parents. This model estimates one allele effect per parental line, which is considered to be independent of the genetic background. The QTL effect of parent $p$ is assumed to be constant in all crosses where this parent has been used \citep{blanc_2006}.
 
-In a connected MPP, if $n_{p} < n_{c}$, it is possible to estimate ($n_{p} - 1$) QTL effects. In that case, one expects the parental model to be more powerful than the cross-specific model because the number of parameters to estimate is reduced \citep{blanc_2006}. The reduction in the number of parameters to estimate should also help to get better estimates of the QTL effects because the sample size used to estimate these effect increases \citep{li_2005}. Full half diallels, with at least four parents, represent the most connected system where the number of crosses $n_{c} = (n_{p}*(1-n_{p}))/2$ is maximised with respect to the number of parents \citep{jansen_2003}. Coming back to the previous example (\ref{eq:4}), we integrate in the QTL incidence matrix the fact that the two crosses are connected via the common parent $P_{A}$.
+In a connected MPP, if $(n_{p} -1) < n_{c}$, one expects the parental model to be more powerful than the cross-specific model because the number of parameters to estimate is reduced \citep{blanc_2006}. The reduction in the number of parameters to estimate should also help to get better estimates of the QTL effects because the sample size used to estimate these effect increases \citep{li_2005}. Full half diallels, with at least four parents, represent the most connected system where the number of crosses $n_{c} = (n_{p}*(1-n_{p}))/2$ is maximised with respect to the number of parents \citep{jansen_2003}. Coming back to the previous example (\ref{eq:4}), we integrate in the QTL incidence matrix the fact that the two crosses are connected via the common parent $P_{A}$.
 
 
 \begin{equation}
@@ -197,7 +194,7 @@ In the parental effect model, the matrix $\bm{X_{Q}}$ is of dimension $[N \times
 
 The third option, called ancestral model, goes one level up in the pedigree and uses relatedness between parents to cluster them into a reduced number of ancestral groups. We assume that parents belonging to the same cluster transmit the same allele \citep{jansen_2003, leroux_2014}. Different options can be used to cluster parental lines. One of them is the \proglang{R} package \pkg{clusthaplo} \citep{leroux_2014}. \pkg{clusthaplo} is an algorithm to cluster parental lines along the genome based on genetic similarity. \pkg{clusthaplo} uses a sliding window to define ancestral classes at each marker position based on local genetic similarities using marker scores within the window. If the local marker density is not large enough, \pkg{clusthaplo} uses the global genetic similarity defined by a kinship coefficient. \pkg{mppR} contains a function to call \pkg{clusthaplo}.   
 
-The ancestral QTL incidence matrix $\bm{X_{Q}^{*}}$ can be obtained by modifying the parental IBD QTL incidence matrix $\bm{X_{Q}}$ using \pkg{clusthaplo} results. The ancestral model uses therefore both IBD and parental relatedness IBS information. Continuing our example (\ref{eq:6}), let us assume that at the considered QTL position parents $A$ and $C$ belong to the same ancestral group $A_{1}$, and parent $B$ falls apart in group $A_2$ for illustration purpose.
+The ancestral QTL incidence matrix $\bm{X_{Q}^{*}}$ can be obtained by modifying the parental IBD QTL incidence matrix $\bm{X_{Q}}$ using \pkg{clusthaplo} results. The ancestral model uses therefore both IBD and parental relatedness IBS information. Continuing our example (\ref{eq:6}), let us assume that at the considered QTL position parents $A$ and $C$ belong to the same ancestral group $A_{1}$, and parent $B$ falls apart in group $A_2$.
  
 \begin{equation}
 	\label{eq:7}
@@ -229,13 +226,13 @@ The matrix $\bm{X_{Q}^{*}}$ of the ancestral model is of dimension $[N \times n_
 \label{par_anc_const}
 
 
-The estimation of parental (ancestral) QTL effect also requires the application of a constraint to the QTL incidence matrix. From a theoretical point of view, it is possible to estimate maximally $n_{p} - 1$ ($n_{a} - 1$) QTL effects per connected part of the design \citep{rebai_2000, weeks_1964}. Therefore, the QTL effects are estimated setting to zero the most frequent parental (ancestral) allele within each connected part. For example in the example of Figure (\ref{fig:1}), we could have $P_{A}$ set as reference of the first connected part and $P_{E}$ set as reference of the second connected part.
+The estimation of parental (ancestral) QTL effect also requires the application of a constraint to the QTL incidence matrix. From a theoretical point of view, it is possible to estimate maximally $n_{p} - 1$ ($n_{a} - 1$) QTL effects per connected part of the design \citep{rebai_2000, weeks_1964}. Therefore, the QTL effects are estimated setting to zero the most frequent parental (ancestral) allele within each connected part. For example in the example of Figure (\ref{fig:1}), we could have $P_{A}$ set as reference of the first connected part and $P_{E}$ set as reference of the second connected part. An alternative is to force the QTL effects to sum to zero. The sum to zero constraint will also take place within each connected part.
 
 
 \subsubsection{Bi-allelic model}
 \label{biall.mod}
 
-The last possibility is the bi-allelic model. If the marker is at the QTL position, the bi-allelic model assumes that genotypes with the same SNP score transmit the same allele. Therefore we assume that the same allele segregate in the whole population which connect all parts of the design that were not connected before. Genetic relatedness is therefore defined based on marker IBS information only. In this model, using the most frequent allele set as reference, $\bm{X_{Q}}$ become a vector $[N \times 1]$ with values 0, 1 or 2 corresponding to the number of copies of the minor allele.
+The last possibility is the bi-allelic model. If the marker is at the QTL position, the bi-allelic model assumes that genotypes with the same SNP score transmit the same allele. Therefore, we assume that the same allele segregates in the whole population which connects all parts of the design that were not connected before. Genetic relatedness is therefore defined based on marker IBS information only. In this model, using the most frequent allele set as reference, $\bm{X_{Q}}$ become a vector $[N \times 1]$ with values 0, 1 or 2 corresponding to the number of copies of the minor allele.
 
 \begin{equation}
 \label{eq:8}
@@ -250,7 +247,7 @@ The last possibility is the bi-allelic model. If the marker is at the QTL positi
 	&0  \cr} \bm{\beta_{Q}} + \bm{r}
 \end{equation}\\
 
-This model corresponds to association mapping models (e.g., model B in \citet{wurschum_2012_comp}). In a connected MPP, if the number of parents is lower than the number of crosses $(n_{p} < n_{c})$. The models can be ordered from less to more parsimonious models (cross-specific, parental, ancestral, bi-allelic). 
+This model corresponds to association mapping models (e.g., model B in \citet{wurschum_2012_comp}). In a connected MPP, if $(n_{p} - 1) < n_{c}$, the models can be ordered from less to more parsimonious models (cross-specific, parental, ancestral, bi-allelic). 
 
 
 \subsection{Variance covariance structure}
@@ -261,20 +258,20 @@ A second important part of the QTL detection problem is the data variance covari
 \subsubsection{Homogeneous residual term}
 \label{HRT}
 
-The simplest form that can be assumed for $\bm{V}$ is a homogeneous residual term (HRT) variance. In this case $\bm{R}=\bm{I_{N}}\sigma_{r}^{2}$. This corresponds to a linear model where residual terms are considered to be independent and to belong to the same distribution. In the HRT model, the variance of the polygenic term ($\sigma_{g}^{2}$) and the error variance ($\sigma_{e}^{2}$) of model (\ref{eq:1}) are both pooled in the unique variance residual term $\sigma_{r}^{2}$.
+The simplest form that can be assumed for $\bm{V}$ is a homogeneous residual term (HRT) variance. In this case, $\bm{R}=\bm{I_{N}}\sigma_{r}^{2}$. This corresponds to a linear model where residual terms are considered to be independent and to belong to the same distribution. In the HRT model, the variance of the polygenic term ($\sigma_{g}^{2}$) and the error variance ($\sigma_{e}^{2}$) of model (\ref{eq:1}) are both pooled in the unique variance residual term $\sigma_{r}^{2}$.
 
 Other models are possible for the VCOV. You can find model with alternative VCOV in a more general version of \pkg{mppR} available from the following GitHub repository \url{https://github.com/vincentgarin/mppR}. You can find a description these models in the attached vignette.
 
 \subsection{Test statistics}
 
-The significance of the estimated QTL effects $\bm{\hat{\beta}_{Q}}$ can be estimated using the Wald test \citep{wald_1943}. In the case of a HRT model, after simplification, the Wald test can be rewritten like that:
+The significance of the QTL effects $\bm{\hat{\beta}_{Q}}$ can be estimated using the Wald test \citep{wald_1943}. In the case of a HRT model, after simplification, the Wald test can be rewritten like that:
 
 \begin{equation}
 \label{eq:20}
 W(\bm{\hat{\beta}}) = \bm{y}'\bm{\hat{V}}^{-1} \bm{\hat{y}}   
 \end{equation}
 
-$W(\bm{\hat{\beta}})$ is distributed as a chi-squared distribution with the degrees of freedom being equal to the number of QTL alleles. Expression (\ref{eq:20}) shows that the test statistic depends on the correlation between the observed phenotypic values ($\bm{y}$) and the model fitted values ($\bm{\hat{y}}$) and the estimated VCOV ($\bm{\hat{V}}$). For that reason, the choice of the QTL incidence matrix ($\bm{X_{Q}}$) should be such that the phenotypic variations is captured as accurately as possible. If these variations are due to parental or cross-specific effects, corresponding QTL effects should perform better at the price of a larger number of parameters to estimate. On the other hand, if the effects are similar through the MPP, a reduced number of parameters will capture this variability and allows gains in power. The VCOV structure should also be selected to reflect local patterns of variability. If heterogeneity is present between crosses, the CSRT model will give test statistics considering this heterogeneity.
+$W(\bm{\hat{\beta}})$ is distributed as a chi-squared distribution with the degrees of freedom being equal to the number of QTL alleles. Expression (\ref{eq:20}) shows that the test statistic depends on the correlation between the observed phenotypic values ($\bm{y}$) and the model fitted values ($\bm{\hat{y}}$) and on the estimated VCOV ($\bm{\hat{V}}$). For that reason, the choice of the QTL incidence matrix ($\bm{X_{Q}}$) should be such that the phenotypic variations is captured as accurately as possible. If these variations are due to parental or cross-specific effects, corresponding QTL effects should perform better at the price of a larger number of parameters to estimate. On the other hand, if the effects are similar through the MPP, a reduced number of parameters will capture this variability and allows gains in power. The VCOV structure should also be selected to reflect local patterns of variability. If heterogeneity is present between crosses, the CSRT model will give test statistics considering this heterogeneity.
 
 
 \subsection{QTL detection procedure}
@@ -309,43 +306,44 @@ where $\bm{X_{q}}$ represents the selected cofactors. During the CIM scan, an ex
 \subsection{Multi-QTL effect (MQE) model}
 \label{MQE}
 
-A variation on the common QTL model with a single type of effect is the multi-QTL effect (MQE) model. In the MQE model QTLs can have different types of effects (cross-specific, parental, ancestral or bi-allelic). To build an MQE model a forward selection procedure can be used. For each QTL to be added, genome wide test profiles are calculated for each of the types of QTL effects that have been specified by the user. The model that is fitted at each position within a profile is:
+A variation on the common QTL model with a single type of effect is the multi-QTL effect (MQE) model. In the MQE model, the QTLs present in the final model can have different types of effects (cross-specific, parental, ancestral or bi-allelic). To build an MQE model we use a forward selection procedure. For each QTL to be added, genome wide profiles with a consistent QTL effect are calculated for each types of QTL effects that have been specified by the user. The model that is fitted at each position within a profile is:
 
 \begin{equation}
-\label{eq:30}
-\bm{y}  =  \bm{X_{c}}\bm{\beta_{c}} + \bm{X_{Q1}}\bm{\beta_{Q1}} + \bm{r}
+	\label{eq:30}
+	\bm{y}  =  \bm{X_{c}}\bm{\beta_{c}} + \bm{X_{Q1}}\bm{\beta_{Q1}} + \bm{r}
 \end{equation}
 
-Where the first QTL, corresponding to Q1, is represented by the model term $\bm{X_{Q1}}\bm{\beta_{Q}}$ with an effect that is either cross-specific, parental, ancestral, or bi-allelic along the genome. 
-From each of these profiles, the most significant position based on the -log10($p$)~value statistic is selected (e.g., $\bm{X_{Q1.cr}}$, $\bm{X_{Q1.par}}$, $\bm{X_{Q1.anc}}$, $\bm{X_{Q1.biall}}$). Note that the selected QTL positions for the different types of effects need not coincide. The QTL that increases most the $R_{adj}^{2}$ (\ref{eq:29}) is selected and added to the model as a cofactor for the next set of genome wide scans. If at step 1 we selected a bi-allelic QTL, then at step 2 the QTL profiles will be based on the following models:
+Where the (first) QTL ($\bm{X_{Q1}}\bm{\beta_{Q}}$) has an effect that is either cross-specific, parental, ancestral, or bi-allelic along the genome. From each of these profiles, the most significant position based on the -log10($p$)~value statistic is selected (e.g., $\bm{X_{Q1.cr}}$, $\bm{X_{Q1.par}}$, $\bm{X_{Q1.anc}}$, $\bm{X_{Q1.biall}}$). Note that the selected QTL positions for the different types of effects can be different. The QTL that increases most the $R_{adj}^{2}$ (\ref{eq:29}) is selected, with it type of effect, and added to the model as a cofactor for the next set of genome wide scans. If at step 1 we selected a bi-allelic QTL, then at step 2 the QTL profiles will be based on the following models:
 
 \begin{equation}
-\label{eq:31}
-\bm{y}  =  \bm{X_{c}}\bm{\beta_{c}} + \bm{X_{q1.biall}}\bm{\beta_{q1}} + \bm{X_{Q2}}\bm{\beta_{Q2}} + \bm{r}
+	\label{eq:31}
+	\bm{y}  =  \bm{X_{c}}\bm{\beta_{c}} + \bm{X_{q1.biall}}\bm{\beta_{q1}} + \bm{X_{Q2}}\bm{\beta_{Q2}} + \bm{r}
 \end{equation}
 
 For the set of QTL effects specified by the user, genome wide scans are performed via a test for the QTL effect in the term $\bm{X_{Q2}}\bm{\beta_{Q2}}$. The forward selection process stops when no further significant QTLs can be identified. At this point, a final list of QTLs is compiled by a backward elimination. A final model with $t$ QTLs could look like:
 
 \begin{equation}
-\label{eq:32}
-\bm{y}  =  \bm{X_{c}}\bm{\beta_{c}} + \bm{X_{Q1.biall}}\bm{\beta_{Q1}} + ... + \bm{X_{Q(t-1).par}}\bm{\beta_{Q(t-1)}} + \bm{X_{Qt.anc}}\bm{\beta_{Qt}}  + \bm{r}  
+	\label{eq:32}
+	\bm{y}  =  \bm{X_{c}}\bm{\beta_{c}} + \bm{X_{Q1.biall}}\bm{\beta_{Q1}} + ... + \bm{X_{Q(t-1).par}}\bm{\beta_{Q(t-1)}} + \bm{X_{Qt.anc}}\bm{\beta_{Qt}}  + \bm{r}  
 \end{equation}\\
 
 \subsection{QTL effect estimation}
 \label{Q_eff_est}
 
-Once a final list of QTLs is assessed, the estimates for the regression coefficients in the corresponding multi-QTL model provide the QTL effects. For this model also a global goodness of fit is calculated using $R^{2}$. Partial $R^{2}$ statistics are indicators of the contributions of individual QTLs.
+Once a final list of QTLs is determined, the estimates for the regression coefficients in the corresponding multi-QTL model provide the QTL effects. For this model a global goodness of fit can also be calculated using $R^{2}$. Partial $R^{2}$ statistics are indicators of the contributions of each individual QTLs.
 
 \subsubsection{Genetic effect estimation and interpretation}
 
-In the cross-specific model (\ref{cr.mod}), the genetic predictors for the additive effects are constructed by half the difference between the second parent and the first parent for their conditional QTL genotype probabilities. The elements of $\bm{\beta_{Q}}$ represent the within cross allele substitution effect.
+In the cross-specific model (\ref{cr.mod}), the genetic predictors for the additive effects represent half the difference between the second parent and the first parent for their conditional QTL genotype probabilities. The elements of $\bm{\beta_{Q}}$ represent the within cross allele substitution effect.
 
-As mentioned above (\ref{par_anc_const}), for the parental (\ref{par.mod}) and the ancestral (\ref{anc.mod}) models, from a theoretical point of view, it is possible to estimate a maximum of $n_{p} - 1$ ($n_{a} - 1$) QTL effects per connected part of the design \citep{rebai_2000}. Within each connected part, the most frequent parental (ancestral) allele is used as reference. The estimated parental (ancestral) QTL effects must be interpreted as a deviation with respect to the connected part reference. Referring again to the example in Figure (\ref{fig:1}), if $P_{A}$ is set as reference of the first connected part, its value will be zero and the other parent alleles effects ($P_{B}$, $P_{C}$ and $P_{D}$) will represent deviations with respect to $P_{A}$ allele. If the second part ($P_{E}$, $P_{F}$, and $P_{G}$) was analysed jointly with the first part, the effect of alleles $P_{F}$ and $P_{G}$ will represent deviation with respect to $P_{E}$ and will be independent of the first part parental effects. For the bi-allelic model (\ref{biall.mod}), the estimated genetic effect represents the additive effect of one allele copy of the minor allele with respect to the most frequent allele set as reference.
+For the parental (\ref{par.mod}) and the ancestral (\ref{anc.mod}) models, from a theoretical point of view, it is possible to estimate a maximum of $n_{p} - 1$ ($n_{a} - 1$) QTL effects per connected part of the design \citep{rebai_2000}. Within each connected part, the most frequent parental (ancestral) allele is used as reference. The estimated parental (ancestral) QTL effects must be interpreted as a deviation with respect to the connected part reference. Referring again to the example in Figure (\ref{fig:1}), if $P_{A}$ is set as reference of the first connected part, its value will be zero and the other parent alleles effects ($P_{B}$, $P_{C}$ and $P_{D}$) will represent deviations with respect to $P_{A}$ allele. If the second part ($P_{E}$, $P_{F}$, and $P_{G}$) was analysed jointly with the first part, the effect of alleles $P_{F}$ and $P_{G}$ will represent deviation with respect to $P_{E}$ and will be independent of the first part parental effects.
+
+An alternative is to use a sum to zero constraint. In that case the parental (ancestral) QTL effects are forced to sum to zero. The individual QTL effects represent a deviation with respect to the central tendency. Here also, the constraints are defined within each connected part. For the bi-allelic model (\ref{biall.mod}), the estimated genetic effect represents the additive effect of one allele copy of the minor allele with respect to the most frequent allele set as reference.
 
 
 \subsubsection{Global $R^{2}$}
 
-To compute $R^{2}$, \pkg{mppR}, one compares residual sums of squares of a full model, with QTL(s), to a reduced model, without QTLs.
+To compute the $R^{2}$ statistics, we compare the residual sums of squares of a full model with QTL(s), to the one of a reduced model without QTLs.
 
 \begin{equation}
 \label{eq:27}
@@ -364,13 +362,13 @@ Where $df_{full}$ and $df_{red}$ represent the degrees of freedom of the full an
 \subsubsection{Partial $R^{2}$}
 \label{part.R2}
 
-For each single QTL, a partial $R^{2}$ can be calculated by the difference between the $R^{2}$ of the full model (all QTL positions) and that of the model that drops that particular QTL (difference $R^{2}$). \pkg{mppR} also calculates partial $R^{2}$ by comparing a model without QTLs with single locus QTL models (single $R^{2}$). These estimates can also be adjusted using formula (\ref{eq:29}). The partial $R^{2}$ is an estimation of the individual QTL contribution to the phenotypic variation. The difference and single $R^{2}$ give estimates of the lower and upper bound explained variance by individual QTLs.
+For each single QTL, a partial $R^{2}$ can be calculated by the difference between the $R^{2}$ of the full model (all QTL positions) and the $R^{2}$ of the model that drops that particular QTL (difference $R^{2}$). \pkg{mppR} also calculates partial $R^{2}$ by comparing a model without QTLs with single locus QTL models (single $R^{2}$). These estimates can also be adjusted using formula (\ref{eq:29}). The partial $R^{2}$ is an estimation of the individual QTL contribution to the phenotypic variation. The difference and single $R^{2}$ give estimates of the lower and upper bound explained variance by individual QTLs.
 
 
 \subsection{Cross-validation}
 \label{CV}
 
-A cross-validation (CV) approach can be used to evaluate the performance of the QTL detection process and get less biased QTL effect estimates \citep{utz_2000}. CV allows to assess predictability of QTL effects in data not used for model training. The proposed CV procedure is an adaptation of \citet{utz_2000} procedure to the MPP context. A single run of CV is composed of the following steps:
+A cross-validation (CV) approach can be used to evaluate the performance of the QTL detection process and to assess the QTL effect in a pseudo-independent population \citep{utz_2000}. CV allows to assess predictability of QTL effects in data not used for model training. The proposed CV procedure is an adaptation of \citet{utz_2000} procedure to the MPP context. A single run of CV is composed of the following steps:
 
 \begin{enumerate}
 	
@@ -383,7 +381,7 @@ A cross-validation (CV) approach can be used to evaluate the performance of the 
 \end{enumerate}
 
 
-\section{Illustration:  QTL analysis US-NAM population}
+\section{Illustration: US-NAM population QTL analysis}
 \label{sec:3}
 
 \subsection{Overview}
@@ -392,7 +390,7 @@ A cross-validation (CV) approach can be used to evaluate the performance of the 
 
 
 \begin{figure}[!ht]
-	\includegraphics[width=1\textwidth,natwidth=610,natheight=642]{figures/Workflow2.jpg}
+	\includegraphics[width=1\textwidth]{figures/Workflow2.jpg}
 	\caption{mppR workflow.}
 	\label{fig:2}
 \end{figure}
@@ -429,7 +427,7 @@ geno.par <- USNAM_geno[1:6, ]
 
 \subsubsection{Map data}
 
-\code{USNAM\_map} is a three columns genetic map with marker indicator, chromosomes and map positions given in centi-Morgan (cM). It has required format for the argument \code{map} in function \code{create.mppData()}. The marker identifiers must be \code{character}. The chromosomes and genetic positions must be \code{numeric}. The list of markers must be column names of the \code{geno.off} and \code{geno.par} arguments.
+\code{USNAM\_map} is a three columns genetic map with marker indicator, chromosomes and map positions given in centi-Morgan (cM). It has the required format for the argument \code{map} in function \code{create.mppData()}. The marker identifiers must be \code{character}. The chromosomes and genetic positions must be \code{numeric}. The list of markers must be column names of the \code{geno.off} and \code{geno.par} arguments.
 
 <<map_data>>=
 data("USNAM_map", package = "mppR")
@@ -439,7 +437,7 @@ map <- USNAM_map
 
 \subsubsection{Phenotypic data}
 
-The file \code{USNAM\_pheno} is a \code{numeric matrix} containing the phenotypic measurements of 500 offspring genotypes for the trait upper leaf angle (ULA). The row names represent the genotype identifiers. They must be identical to the row names of \code{geno.off}. \code{USNAM\_pheno} can be used as \code{pheno} argument for the \code{create.mppData()} function. The \code{pheno} argument can contain more than one trait. A cross indicator \code{character vector} can be formed by subsetting the genotype names. It specifies to which cross each genotype belongs and can be used for the \code{cross.ind} argument in \code{create.mppData()}.
+The file \code{USNAM\_pheno} is a \code{numeric matrix} containing the phenotypic measurements of 500 offspring genotypes for the trait upper leaf angle (ULA). The row names represent the genotype identifiers. They must be identical to the row names of \code{geno.off}. \code{USNAM\_pheno} can be used as \code{pheno} argument for the \code{create.mppData()} function. The \code{pheno} argument can contain several traits. A cross indicator \code{character vector} can be formed by subsetting the genotype names. It specifies to which cross each genotype belongs and can be used for the \code{cross.ind} argument in \code{create.mppData()}.
 
 <<phenotype_data>>=
 data("USNAM_pheno", package = "mppR")
@@ -457,7 +455,7 @@ par.per.cross <- cbind(unique(cross.ind), rep("B73", 5),
                        rownames(geno.par)[2:6])
 @
 
-The \code{par.per.cross} matrix can be used in the \code{design_connectivity()} function to obtain and visualize the connected parts. For example using the example of Figure (\ref{fig:1}), we have
+The \code{par.per.cross} matrix can be used in the \code{design_connectivity()} function to obtain and visualize the connected parts. For example using the illustration of Figure (\ref{fig:1}), we have
 
 <<design_connectivity>>=
 ppc_ex <- cbind(paste0("c", 1:7),
@@ -487,7 +485,7 @@ mppData <- create.mppData(geno.off = geno.off, geno.par = geno.par,
  
 Before QTL analysis, the raw data should go through a quality control (QC). This procedure will ensure that marker format is correct and that markers are informative, meaning that their segregation rate is sufficient to provide a reliable basis to investigate and estimate the QTL effects. The function \code{QC.mppData()} performs a default QC.
 
-The user should be aware that it is difficult to propose general settings for QC that will be suitable for all MPPs. Moreover, the type of model fitted should also guide the QC. For example, if the user wants to give more emphasis to the cross-specific model, the QC should ensure that there is enough within cross segregation. On the other hand, the bi-allelic model assumes that the QTLs segregate in the whole population, therefore for this model, minimum segregation can be evaluated at the whole population level. The procedure implemented in \code{QC.mppData()} is the following:
+The user should be aware that it is difficult to propose general settings for QC that will be suitable for all MPPs. Moreover, the type of model fitted should also guide the QC. For example, if the user wants to give more emphasis to the cross-specific model, the QC should ensure that there is enough within cross segregation. On the other hand, the bi-allelic model assumes that the QTLs segregate in the whole population. Therefore for this model, minimum segregation can be evaluated at the whole population level. The procedure implemented in \code{QC.mppData()} is the following:
 
 \begin{enumerate}
 
@@ -505,14 +503,14 @@ The user should be aware that it is difficult to propose general settings for QC
 
 \item Filter markers based on minor allele frequency (MAF). Different options are possible.
 
-The first one filter marker based on MAF at the whole population
+A) The first one filter marker based on MAF at the whole population
 level, and/or on MAF within crosses. The markers with a MAF below a threshold given by \code{MAF.pop.lim} at the whole population level will be discarded.
 
 The user can specify the  critical values for MAF within cross using \code{MAF.cr.lim}. By default, the within cross MAF values are defined by the following function of the cross-size $N_{c}$: $MAF(N_{c}) = 0.5$ if $N_{c} \in [0, 10]$ and $MAF(N_{c}) = (4.5/N_{c}) + 0.05$ if $N_{c} > 10$. This means that up to $10$ genotypes, the critical within cross MAF is set to $50\%$. Then it decreases when the number of genotype increases until $5\%$ set as a lower bound. 
 
-If the within cross MAF is below the limit in at least one cross, then marker scores of the problematic cross are either put as missing (\code{MAF.cr.miss = TRUE}) or the whole marker is discarded (\code{MAF.cr.miss = FALSE}). By default, \code{MAF.cr.miss = TRUE} which allows to include a larger number of markers and to cover a wider genetic diversity.
+If the within cross MAF is below the limit in at least one cross, then marker scores of the problematic cross are either put as missing (\code{MAF.cr.miss = TRUE}) or the whole marker is discarded (\code{MAF.cr.miss = FALSE}). By default, \code{MAF.cr.miss = TRUE}, which allows to include a larger number of markers and to cover a wider genetic diversity.
 
-An alternative is to select only markers that segregate in at least one cross at the \code{MAF.cr.lim2} rate.
+B) An alternative is to select only markers that segregate in at least one cross at the \code{MAF.cr.lim2} rate.
 
 \end{enumerate}
 
@@ -534,9 +532,7 @@ mppData <- IBS.mppData(mppData = mppData, impute = TRUE,
 
 \subsubsection{IBD processing}
 
-The other models (cross-specific, parental, and ancestral) use IBD probabilities. The function \code{IBD.mppData()} estimates IBD probabilities after converting the marker genotype data into within cross ABH format. For each cross, the maker scores of the two cross parents are used as reference. Homozygous offspring genotype scores similar to parent 1 get score \code{"A"} (\code{"B"} for parent 2). Heterozygous genotypes are scored \code{"H"}. If at least one of the parents is missing or the parents are monomorphic, the offspring will receive \code{NA}. The regular ABH conversion assumes that the reference parent scores are fully homozygous or missing. However, if some parent marker scores are heterozygous, the ABH conversion can still be performed setting argument \code{het.miss.par = TRUE}. In that case, when a parent score is heterozygous or missing and the other parent is homozygous, the function will try to infer the score of the allele that was transmitted to the offspring by the heterozygous or missing parent looking at the segregation pattern.
-
-Then the computation of the IBD probabilities is done by calling the function \code{calc.genoprob()} of the \proglang{R}/\pkg{qtl} package \citep{broman_rqtl}. For that purpose a temporary csv file, which can be loaded by \proglang{R}/\pkg{qtl}, will be saved at the location specified in \code{dir}.
+The other models (cross-specific, parental, and ancestral) use IBD probabilities. The function \code{IBD.mppData()} estimates IBD probabilities after converting the marker genotype data into within cross ABH format. For each cross, the maker scores of the two cross parents are used as reference. Homozygous offspring genotype scores similar to parent 1 get score \code{"A"} (\code{"B"} for parent 2). Heterozygous genotypes are scored \code{"H"}. If at least one of the parents is missing or the parents are monomorphic, the offspring will receive \code{NA}. The regular ABH conversion assumes that the reference parent scores are fully homozygous or missing. However, if some parent marker scores are heterozygous, the ABH conversion can still be performed setting argument \code{het.miss.par = TRUE}. In that case, when a parent score is heterozygous or missing and the other parent is homozygous, the function will try to infer the score of the allele that was transmitted by the heterozygous or the missing parent looking at the segregation pattern. Then the computation of the IBD probabilities is done by calling the function \code{calc.genoprob()} of the \proglang{R}/\pkg{qtl} package \citep{broman_rqtl}. For that purpose a temporary csv file, which can be loaded by \proglang{R}/\pkg{qtl}, will be saved at the location specified in \code{dir}.
 
 The type of population must be specified in argument \code{type}. Different population types are possible: F-type ("F"), back-cross ("BC"), backcross followed by selfing ("BCsFt"), double haploid ("DH"), and recombinant imbred lines ("RIL"). The number of F and BC generations can be specified using \code{F.gen} and \code{BC.gen}. The agument \code{type.mating} specifies if F and RIL populations were obtained by selfing or by sibling mating. DH and RIL populations are read as back-cross by R/qtl. For these two population types, heterozygous scores will be treated as missing values.
 
@@ -583,13 +579,13 @@ mppData_sub <- subset(x = mppData, mk.list = mppData$map[, 2] == 1,
 
 \subsection{QTL analysis}
   
-When all data elements are ready, the user can start the QTL analysis. In all functions involving the computation of a QTL model (\code{mpp_CIM()}, \code{mpp_CV()}, \code{mpp_perm()}, \code{mpp_proc()}, \code{mpp_SIM()}, \code{MQE_proc()}, \code{QTL_gen_effects()}, etc.), the arguments \code{Q.eff} describes the type of QTL effect. \code{Q.eff} takes the values \code{"cr"}, \code{"par"}, \code{"anc"}, \code{"biall"} for the cross-specific, parental, ancestral, and bi-allelic model respectively. A complete QTL analysis can be performed using the generic function \code{mpp_proc()}. This is a wrapping function for individual functions, indicated in parenthesis, performing each a part of the following QTL detection procedure:
+When all data elements are ready, the user can start the QTL analysis. In all functions involving the computation of a QTL model (\code{mpp_CIM()}, \code{mpp_CV()}, \code{mpp_perm()}, \code{mpp_proc()}, \code{mpp_SIM()}, \code{MQE_proc()}, \code{QTL_gen_effects()}, etc.), the arguments \code{Q.eff} describes the type of QTL effect. \code{Q.eff} takes the values \code{"cr"}, \code{"par"}, \code{"anc"}, \code{"biall"} for the cross-specific, parental, ancestral, and bi-allelic model, respectively. A complete QTL analysis can be performed using the generic function \code{mpp_proc()}. This is a wrapping function for individual functions, indicated in parenthesis, performing each a part of the following QTL detection procedure:
   
 \begin{enumerate}
 
 \item SIM scan to select cofactors (\code{mpp_SIM()}).  In that case, we fit an ancestral model (\code{Q.eff = "anc"}).
 
-\item Cofactor selection with SIM -log10($p$)~value above the \code{threshold} value with a minimum distance (\code{win.cof}) between selected positions (\code{QTL_select()}). The cofactor selection procedure is done per chromosome. It first picks the most significant position and then removes the positions in the neighbourhood of the selected position from the candidate list of QTLs/cofactors. The process continues until no position is significant anymore. The threshold (\code{thre.cof} or \code{thre.QTL}) values can be determined by permutation using \code{mpp_perm()}.
+\item Cofactor selection with SIM -log10($p$)~value above the \code{threshold} value with a minimum distance (\code{win.cof}) between selected positions (\code{QTL_select()}). The cofactor selection procedure is done per chromosome. It first selects the most significant position and then removes the positions in the neighbourhood of the selected position from the candidate list of QTLs/cofactors. The process continues until no position is significant anymore. The threshold (\code{thre.cof} or \code{thre.QTL}) values can be determined by permutation using \code{mpp_perm()}.
 
 \item CIM scan (\code{mpp_CIM()}) using the selected cofactors except within an exclusion window (\code{window}) around the selected cofactors where they are excluded from the model. It is possible to perform several consecutive run of CIM using \code{N.cim} .
 
@@ -657,7 +653,7 @@ plot(x = CIM, QTL = QTL, type = "l")
 @
 
 \begin{figure}[!ht]
-\includegraphics[width=1\textwidth,natwidth=610,natheight=642]{figures/QTL_profile.pdf}
+\includegraphics[width=1\textwidth]{figures/QTL_profile.pdf}
 \caption{CIM QTL profile from an ancestral model using HRT. The cofactors positions are represented by vertical dashed lines.}
 \label{fig:3}
 \end{figure}
@@ -669,7 +665,7 @@ plot(x = CIM, gen.eff = TRUE, mppData = mppData, QTL = QTL, Q.eff = "anc")
 @
 
 \begin{figure}[!ht]
-\includegraphics[width=1\textwidth,natwidth=610,natheight=642]{figures/gen_eff.pdf}
+\includegraphics[width=1\textwidth]{figures/gen_eff.pdf}
 \caption{Visualisation genome-wide genetic effect significance from a CIM ancestral model using HRT. The vertical dashed lines represent the detected QTL positions.}
 \label{fig:4}
 \end{figure}
@@ -693,7 +689,7 @@ CV <- mpp_CV(pop.name = "USNAM", trait.name = "ULA", mppData = mppData,
 @
 
 \begin{figure}[!ht]
-\includegraphics[width=1\textwidth,natwidth=610,natheight=642]{figures/plot_CV.pdf}
+\includegraphics[width=1\textwidth]{figures/plot_CV.pdf}
 \caption{Transparency plot of CV results representing an overlay of QTL profiles. The black bars are proportional to the number of times a position was detected as QTL.}
 \label{fig:5}
 \end{figure}

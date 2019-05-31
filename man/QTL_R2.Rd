@@ -4,7 +4,8 @@
 \alias{QTL_R2}
 \title{QTL global and partial R squared}
 \usage{
-QTL_R2(mppData, trait = 1, QTL = NULL, Q.eff = "cr", glb.only = FALSE)
+QTL_R2(mppData, trait = 1, QTL = NULL, Q.eff = "cr",
+  glb.only = FALSE)
 }
 \arguments{
 \item{mppData}{An object of class \code{mppData}.}

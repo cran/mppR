@@ -5,7 +5,8 @@
 \title{plot QTL profile}
 \usage{
 \method{plot}{QTLprof}(x, gen.eff = FALSE, mppData, Q.eff, QTL = NULL,
-  type = "l", main = "QTL profile", threshold = 3, text.size = 18, ...)
+  type = "l", main = "QTL profile", threshold = 3, text.size = 18,
+  ...)
 }
 \arguments{
 \item{x}{Object of class \code{QTLprof} returned by the function

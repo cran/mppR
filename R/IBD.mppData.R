@@ -347,8 +347,6 @@ IBD.mppData <- function(mppData, het.miss.par = TRUE, subcross.ind = NULL,
   # 7. transform the map and geno.par
   ###################################
   
-  c(rep(1, 3), rep(2, 5),rep(10, 4))
-  
   chr.ind <- factor(x = map[, 2], levels = unique(map[, 2]))
   
   new.map <- data.frame(map[, 1:2], sequence(table(chr.ind)),
@@ -360,8 +358,8 @@ IBD.mppData <- function(mppData, het.miss.par = TRUE, subcross.ind = NULL,
   
   geno.par.new <- t(geno.par)
   
-  geno.par.new <- data.frame(new.map, geno.par.new, stringsAsFactors = FALSE)
-  colnames(geno.par.new)[5:dim(geno.par.new)[2]] <- parents
+  geno.par.new <- data.frame(new.map, geno.par.new, stringsAsFactors = FALSE,
+                             check.names = FALSE)
   
   # 8. fill the mppData object
   #############################

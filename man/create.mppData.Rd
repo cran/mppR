@@ -27,7 +27,9 @@ must be coded \code{NA}.}}
 \item{map}{Three columns \code{data.frame} with: 1) \code{character} marker
 identifiers; 2) \code{numeric} chromosome; 3) \code{numeric} positions in
 centi-Morgan.\strong{The marker identifiers must be identical to the column
-names of the maker matrices (\code{geno.off} and \code{geno.par}).}}
+names of the maker matrices (\code{geno.off} and \code{geno.par}).
+The chromosome identifiers must start by 1 and increase by 1 unit,
+e.g. 1, 2, 3, ...}}
 
 \item{pheno}{\code{Numeric matrix} with one column per trait and rownames
 as genotypes identifiers. \strong{The genotypes identifiers must be identical

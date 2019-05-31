@@ -79,8 +79,8 @@
 #' Default = TRUE.
 #' 
 #' @param MAF.cr.lim2 \code{Numeric}. Alternative option for marker MAF
-#' filtering. Only markers segregating with a MAF larger than \code{MAF.cr/lim2}
-#' will be kept for the analysis. Default = NULL.
+#' filtering. Only markers segregating with a MAF larger than \code{MAF.cr.lim2}
+#' in at least one cross will be kept for the analysis. Default = NULL.
 #' 
 #' @param verbose \code{Logical} value indicating if the steps of the QC should
 #' be printed. Default = TRUE.
@@ -332,7 +332,7 @@ QC.mppData <- function(mppData, mk.miss = 0.1, gen.miss = 0.25, n.lim = 15,
   if(verbose){
     
     cat(paste("Remove crosses with less than", n.lim, "observations :",
-              rem.gen_i, "markers removed", "\n"))
+              rem.gen_i, "genotypes removed", "\n"))
     
   }
   
@@ -673,6 +673,12 @@ QC.mppData <- function(mppData, mk.miss = 0.1, gen.miss = 0.25, n.lim = 15,
   n.par <- length(parents)
   
   n.cr <- dim(par.per.cross)[1]
+  
+  if(n.cr < 2){
+    
+    stop('The QC reduced your MPP to less than 2 crosses. You must modify your QC parameters to have at least 2 crosses in your MPP.')
+    
+  }
   
   # 13. re-form the mppData object with the new elements
   ######################################################
