@@ -267,7 +267,7 @@ QC.mppData <- function(mppData, mk.miss = 0.1, gen.miss = 0.25, n.lim = 15,
   
   if(verbose){
     
-    cat(paste("Remove marker with missing rate <", mk.miss, "        :",
+    cat(paste("Remove marker with missing rate >", mk.miss, "        :",
               rem.mk_i, "markers removed", "\n"))
     
   }
@@ -299,7 +299,7 @@ QC.mppData <- function(mppData, mk.miss = 0.1, gen.miss = 0.25, n.lim = 15,
   
   if(verbose){
     
-    cat(paste("Remove genotype with missing rate <", gen.miss, "     :",
+    cat(paste("Remove genotype with missing rate >", gen.miss, "     :",
               rem.gen_i, "genotypes removed", "\n"))
     
   }

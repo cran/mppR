@@ -172,7 +172,7 @@ create.mppData <- function(geno.off = NULL, geno.par = NULL, map = NULL,
   chr_id <- unique(map[, 2])
   chr_ref <- 1:length(chr_id)
   
-  if(!identical(chr_id, chr_ref)){
+  if(sum(chr_id - chr_ref) != 0){
     
     stop("the chromosome identifier in 'map' must start by 1 and increase by 1 unit, e.g. 1, 2, 3, ...")
     

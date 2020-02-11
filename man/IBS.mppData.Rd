@@ -4,43 +4,12 @@
 \alias{IBS.mppData}
 \title{IBS coding for \code{mppData} objects}
 \usage{
-IBS.mppData(mppData, impute = FALSE, impute.type = "random",
-  map_bp = NULL, replace.value = NULL, label.heter = "alleleCoding")
+IBS.mppData(mppData)
 }
 \arguments{
 \item{mppData}{An object of class \code{mppData}. The \code{mppData} must
 have been processed using: \code{\link{create.mppData}} and
 \code{\link{QC.mppData}}.}
-
-\item{impute}{\code{Logical} value. if \code{impute = TRUE}, the function
-will impute missing values using the \code{codeGeno()} function from the
-synbreed package. Default = FALSE.}
-
-\item{impute.type}{\code{character} with one out of \code{"fix"},
-\code{"random"}, \code{"family"}, \code{"beagle"}, \code{"beagleAfterFamily"},
-\code{"beagleAfterFamilyNoRand"}. For details see synbreed package
-documentation. \strong{To be able to use Beagle for imputation, Please load
-the synbreed package using \code{library(synbreed)}} Default = "random".}
-
-\item{map_bp}{\code{data.frame} with three columns specifying for each marker
-position the marker identifier, the \code{numeric} or \code{character}
-chromosome the and physical bp position. This argument is necessary for
-imputation using Beagle. Default = NULL.}
-
-\item{replace.value}{\code{numeric} scalar to replace missing value in case
-\code{impute.type = fix}. Only 0, 1, 2. Should be chosen. Default = NULL.}
-
-\item{label.heter}{This is either a scalar or vector of characters to identify
-heterozygous genotypes or a function returning TRUE if an element of the
-marker matrix is the heterozygous genotype. Defining a function is useful,
-if number of unique heterozygous genotypes is large, i.e. if genotypes are
-coded by alleles. If the heterozygous genotype is coded like
-"A/T","G/C", ..., "AG", "CG", ..., "T:C", "G:A", ... or "G|T", "A|C", ...
-then label.heter="alleleCoding" can be used. Note that
-heterozygous values must be identified unambiguously by label.heter. Use
-label.heter=NULL if there are only homozygous genotypes, i.e. in DH lines,
-to speed up computation and restrict imputation to values 0 and 2.
-Default = "alleleCoding".}
 }
 \value{
 an increased \code{mppData} object containing the the same elements
@@ -58,10 +27,7 @@ scores.}
 \description{
 Transform the genotype marker matrix of a \code{mppData} object into
 Identical by state (IBS) 0, 1, 2 format. The IBS score represent the number
-of copies of the minor allele. The 0, 1, 2 coding can be preceded by a
-marker imputation (\code{impute = TRUE}) to fill the missing values. The
-imputation of the missing values is performed using the \code{codeGeno()}
-function from synbreed (Wimmer et al., 2012).
+of copies of the minor allele.
 }
 \examples{
 
@@ -69,19 +35,9 @@ data(mppData_init)
 
 mppData <- QC.mppData(mppData_init)
 
-mppData <- IBS.mppData(mppData = mppData, impute = TRUE,
-impute.type = "random")
+mppData <- IBS.mppData(mppData = mppData)
       
 
-}
-\references{
-Wimmer, V., Albrecht, T., Auinger, H. J., & Schon, C. C. (2012). synbreed: a
-framework for the analysis of genomic prediction data using R.
-Bioinformatics, 28(15), 2086-2087.
-
-Browning, B. L., & Browning, S. R. (2013). Improving the accuracy and
-efficiency of identity-by-descent detection in population data. Genetics,
-194(2), 459-471.
 }
 \seealso{
 \code{\link{create.mppData}}, \code{\link{QC.mppData}}

@@ -1,7 +1,7 @@
 Package: mppR
 Type: Package
-Version: 1.2.0
-Date: 2019-05-31
+Version: 1.2.1
+Date: 2020-02-10
 Title: Multi-Parent Population QTL Analysis
 Authors@R: c(person("Vincent", "Garin", role = c("aut", "cre"),
              email = "vincent.garin6@gmail.com"),
@@ -21,13 +21,13 @@ License: GPL-3
 Imports: ggplot2, graphics, grDevices, methods, parallel, qtl, stats,
         utils, igraph
 Depends: R(>= 3.1.0)
-Suggests: synbreed, testthat
+Suggests: testthat
 RoxygenNote: 6.1.1
 Encoding: UTF-8
 URL: https://github.com/vincentgarin/mppR
 BugReports: https://github.com/vincentgarin/mppR/issues
 NeedsCompilation: no
-Packaged: 2019-05-31 14:15:30 UTC; gebruiker
+Packaged: 2020-02-10 03:23:46 UTC; gebruiker
 Author: Vincent Garin [aut, cre],
   Valentin Wimmer [aut],
   Dietrich Borchardt [ctb, dtc],
@@ -35,4 +35,4 @@ Author: Vincent Garin [aut, cre],
   Marcos Malosetti [ctb, ths]
 Maintainer: Vincent Garin <vincent.garin6@gmail.com>
 Repository: CRAN
-Date/Publication: 2019-05-31 15:50:13 UTC
+Date/Publication: 2020-02-11 21:10:02 UTC

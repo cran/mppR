@@ -13,18 +13,18 @@
 #' effects, the SIM and CIM QTL profile must have been computed with
 #' \code{plot.gen.eff = TRUE}.
 #' 
-#' The genome-wide genetic effects plots is a visualization of the significance
+#' The genome-wide genetic effects plots is a visualisation of the significance
 #' of the QTL effect per cross or per parents along the genome. For a
-#' cross-specific QTL profile (\code{Q.eff = "cr"}): Red color means
+#' cross-specific QTL profile (\code{Q.eff = "cr"}): Blue color means
 #' that the allele coming from parent A(1) increases the phenotypic value and
-#' parent B(2) decreases it and blue that parent A(1) decreases the trait and
+#' parent B(2) decreases it and red that parent A(1) decreases the trait and
 #' parent B(2) increases it.
 #' 
 #' For a parental (\code{Q.eff = "par"}) or an ancestral model
 #' (\code{Q.eff = "anc"}), the results are given per parents. The significance
 #' of the effect must be interpreted as a deviation with respect to the
 #' reference of each connected part. The reference allele is always defined as
-#' the most frequent one. Red (Blue) colour means a significant negative
+#' the most frequent one. Blue (Red) colour means a signicative negative
 #' (positive) effect with respect to the reference of the connected part.
 #' 
 #' The reference parental allele can change at each position according to the
@@ -34,10 +34,12 @@
 #' In that case, the plot should be taken as a rough indication of the signal
 #' distribution.
 #' 
-#' The colour intensity increase with the significance of the effect.
-#' There are five colour intensities according to the p-value of the QTL
-#' effect: 0.05<p-val<0.01; 0.01<p-val<0.001; 0.001<p-val<0.0001;
-#' 0.0001<p-val<0.00001 and p-val< 0.00001.
+#' The colour intensity increase with the significance of the effect (p-val).
+#' The p-val are transformed into a color code (z). If p-val c [0.00001; 0.05]:
+#' z = -log10(p-val). If p-val < 0.00001: z=6. This scale allows to plot
+#' only the significant effects (p-val <= 0.05) and prevent the color scale to
+#' be determine by highly significant values (p-val < 0.00001). The colours red
+#' (positive) and blue (negative) correspond to the sign of the QTL effect.
 #' 
 #' For both type of plot, the user can pass a list of cofactors or QTL position
 #' to the argument \code{QTL}. These positions will be drawn on the graph using
@@ -345,8 +347,8 @@ plot.QTLprof <- function(x, gen.eff = FALSE, mppData, Q.eff, QTL = NULL,
       pl <- ggplot(data, aes(x.pos, y, z = z))
       pl + geom_tile(aes(fill = z, width = w)) +
         facet_wrap(nrow = 1, ~ chr, scales = "free_x") +
-        scale_fill_gradient2(limits = c(-5, 5), low = "red", mid = "white",
-                             high = "blue") +
+        scale_fill_gradient2(limits = c(-6, 6), low = "blue", mid = "white",
+                             high = "red") +
         theme_bw() + xlab("position [cM]") + ylab(y_lab) + 
         scale_y_discrete(labels = y.names) + ggtitle(main) +
         theme(axis.title.x = element_text(size=text.size),
@@ -363,8 +365,8 @@ plot.QTLprof <- function(x, gen.eff = FALSE, mppData, Q.eff, QTL = NULL,
       pl <- ggplot(data, aes(x.pos, y, z = z))
       pl + geom_tile(aes(fill = z, width = w)) +
         facet_wrap(nrow = 1, ~ chr, scales = "free_x") +
-        scale_fill_gradient2(limits = c(-5, 5), low = "red", mid = "white",
-                             high = "blue") +
+        scale_fill_gradient2(limits = c(-6, 6), low = "blue", mid = "white",
+                             high = "red") +
         geom_vline(aes(xintercept = pos.cM), pos.Q, linetype = "longdash") +
         theme_bw() + xlab("position [cM]") + ylab(y_lab) +
         scale_y_discrete(labels = y.names) + ggtitle(main) +

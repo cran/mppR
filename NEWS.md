@@ -1,5 +1,7 @@
-# mppR 1.2.0.9000
-* Actual development version
+# mppR 1.2.1
+* Correction due to the fact that package synbreed was removed from CRAN
+* The possibility to do marker imputation was suppressed.
+* Small modification in the genetic effect plot. Inversion of color
 
 # mppR 1.2.0
 * Corrections of bugs affecting the presentation of the QTL additive effects in: QTL_gen_effects(), MQE_gen_effects(), and the QTL reports of mpp_proc() and MQE_proc()

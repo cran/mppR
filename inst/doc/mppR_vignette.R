@@ -76,8 +76,7 @@ mppData <- QC.mppData(mppData = mppData, n.lim = 15, MAF.pop.lim = 0.05,
 ###################################################
 ### code chunk number 10: IBS.mppData
 ###################################################
-mppData <- IBS.mppData(mppData = mppData, impute = TRUE,
-                       impute.type = 'random')
+mppData <- IBS.mppData(mppData = mppData)
 
 
 
@@ -151,7 +150,7 @@ plot(x = CIM, QTL = QTL, type = "l")
 ###################################################
 ### code chunk number 19: gen_eff_plot
 ###################################################
-plot(x = CIM, gen.eff = TRUE, mppData = mppData, QTL = QTL, Q.eff = "anc")
+plot(x = CIM, gen.eff = TRUE, mppData = mppData, QTL = QTL, Q.eff = "anc", main = 'QTL genetic effect plot')
 
 
 ###################################################

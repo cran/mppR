@@ -13,7 +13,7 @@
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{blkarray}
-%\usepackage{graphicx}
+\usepackage{graphicx}
 % \usepackage{natbib}
 % \usepackage{threeparttable}
 % \usepackage{Sweave}
@@ -30,7 +30,7 @@
         Marcos Malosetti\\Wageningen University \And
     }
     
-\title{\pkg{mppR}: An \proglang{R} Package for QTL Analysis in Multi-parent Populations}
+\title{mppR: An R Package for QTL Analysis in Multi-parent Populations}
 
 %% for pretty printing and a nice hypersummary also set:
 \Plainauthor{Vincent Garin, Valentin Wimmer, Marcos Malosetti, Fred van Eeuwijk } %% comma-separated
@@ -77,7 +77,8 @@
 
 \begin{document}
 %\SweaveOpts{concordance=TRUE}
-\SweaveOpts{engine=R, eps=FALSE, keep.source = TRUE}
+%\SweaveOpts{concordance=TRUE}
+%\SweaveOpts{engine=R, eps=FALSE, keep.source = TRUE}
 
 \section{Introduction}
 
@@ -522,11 +523,11 @@ mppData <- QC.mppData(mppData = mppData, n.lim = 15, MAF.pop.lim = 0.05,
 
 \subsubsection{IBS processing}
 
-To compute a bi-allelic model, the user needs to convert genotype data into IBS format using \code{IBS.mppData()}. This function transforms genotype scores into 0, 1, 2 coding where the score represents the number of minor allele copies. The user can also perform imputation of the missing values (\code{impute = TRUE}). Different options are available, some of them rely on the \code{codeGeno()} function from the package \pkg{synbreed} \citep{wimmer2012synbreed}.
+To compute a bi-allelic model, the user needs to convert genotype data into IBS format using \code{IBS.mppData()}. This function transforms genotype scores into 0, 1, 2 coding where the score represents the number of minor allele copies.
+%The user can also perform imputation of the missing values (\code{impute = TRUE}). Different options are available, some of them rely on the \code{codeGeno()} function from the package \pkg{synbreed} \citep{wimmer2012synbreed}.
 
 <<IBS.mppData>>=
-mppData <- IBS.mppData(mppData = mppData, impute = TRUE,
-                       impute.type = 'random')
+mppData <- IBS.mppData(mppData = mppData)
 
 @
 
@@ -661,18 +662,18 @@ plot(x = CIM, QTL = QTL, type = "l")
 \code{Mpp_SIM()} or \code{mpp_CIM()} results obtained with \code{plot.gen.eff = TRUE} can also be passed to the function \code{plot.QTLprof()} with argument \code{gen.eff = TRUE} to obtain a visualisation of the genetic effect distribution along the genome (Figure~\ref{fig:4}). Once again, the positions passed to the \code{QTL} argument will be drawn on the graph.
 
 <<gen_eff_plot>>=
-plot(x = CIM, gen.eff = TRUE, mppData = mppData, QTL = QTL, Q.eff = "anc")
+plot(x = CIM, gen.eff = TRUE, mppData = mppData, QTL = QTL, Q.eff = "anc", main = 'QTL genetic effect plot')
 @
 
 \begin{figure}[!ht]
-\includegraphics[width=1\textwidth]{figures/gen_eff.pdf}
+\includegraphics[width=1\textwidth]{figures/gen_eff2.pdf}
 \caption{Visualisation genome-wide genetic effect significance from a CIM ancestral model using HRT. The vertical dashed lines represent the detected QTL positions.}
 \label{fig:4}
 \end{figure}
 
-The interpretation of the genetic effect plot depends on the type of QTL effects. For a cross-specific model, red colour means that the allele coming from parent 1(A) increases the trait value, blue means that allele coming from parent 2(B) increases the trait.
+The interpretation of the genetic effect plot depends on the type of QTL effects. For a cross-specific model, blue colour means that the allele coming from parent 1(A) increases the trait value, red means that allele coming from parent 2(B) increases the trait.
 
-For the parental and ancestral models, the effect must be interpreted as deviation with respect to the reference within a connected part. The reference allele is always defined as the most frequent allele. It can change at different positions. Therefore, it is not possible to establish a unique reference allele for the whole genome. The parental alleles significances are assessed per connected part. The red (blue) colour means that the parental allele decrease (increase) the trait value. Parents are ordered from the top to the bottom given the number of times their allele was set as reference in the whole genome. For example the upper parent was the one for which its allele was the highest number of times set as reference in the whole genome. These plots should be interpreted as a rough indication of signal distribution.
+For the parental and ancestral models, the effect must be interpreted as deviation with respect to the reference within a connected part. The reference allele is always defined as the most frequent allele. It can change at different positions. Therefore, it is not possible to establish a unique reference allele for the whole genome. The parental alleles significances are assessed per connected part. The blue (red) colour means that the parental allele decrease (increase) the trait value. Parents are ordered from the top to the bottom given the number of times their allele was set as reference in the whole genome. For example the upper parent was the one for which its allele was the highest number of times set as reference in the whole genome. These plots should be interpreted as a rough indication of signal distribution.
 
 \subsection{Cross-validation}
 

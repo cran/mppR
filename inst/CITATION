@@ -3,7 +3,7 @@ citHeader("To cite the mppR package in publications use:")
 citEntry(entry="Manual",
 	title="mppR: Multi-Parent Population QTL Analysis",
 	author=as.person(c("Garin V", "Wimmer V", "Borchardt D", "van Eeuwijk F", "Malosetti M")),
-	note="R package version 1.2.0",
+	note="R package version 1.2.1",
 	year=2018,url="https://CRAN.R-project.org/package=mppR",
 textVersion=paste("Garin V, Wimmer V, Borchardt D, Malosetti M, van Eeuwijk F (2018). mppR: Multi-Parent Population QTL Analysis.", "R package version 1.2.0")
 )
