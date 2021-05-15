@@ -4,9 +4,18 @@
 \alias{IBD.mppData}
 \title{IBD coding for \code{mppData} objects}
 \usage{
-IBD.mppData(mppData, het.miss.par = TRUE, subcross.ind = NULL,
-  par.per.subcross = NULL, type, F.gen = NULL, BC.gen = NULL,
-  type.mating = NULL, error.prob = 1e-04, map.function = "haldane")
+IBD.mppData(
+  mppData,
+  het.miss.par = TRUE,
+  subcross.ind = NULL,
+  par.per.subcross = NULL,
+  type,
+  F.gen = NULL,
+  BC.gen = NULL,
+  type.mating = NULL,
+  error.prob = 1e-04,
+  map.function = "haldane"
+)
 }
 \arguments{
 \item{mppData}{An object of class \code{mppData}. the \code{mppData} must
@@ -91,7 +100,7 @@ transmitted allele and use this allele score for ABH assignment.
 
 The ABH assignment can be performed using sub-cross structure providing
 information about sub-cross in arguments \code{subcross.ind} and
-\code{par.per.subcross}.
+\code{par.per.subcross}. 
 
 Then the function calculates the IBD probabilities using \code{read.cross()}
 and \code{calc.genoprob()} functions from the R/qtl package

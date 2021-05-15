@@ -284,14 +284,12 @@ IBD.mppData <- function(mppData, het.miss.par = TRUE, subcross.ind = NULL,
   
   if (type == "F") {
     
-    cross.object <- read.cross("csv", , tmp, F.gen = F.gen, 
-                               crosstype = "bcsft")
+    cross.object <- read.cross("csv", , tmp, F.gen = F.gen)
     
     
   } else if (type == "BC") {
     
-    cross.object <- read.cross("csv", , tmp, BC.gen = BC.gen, 
-                               crosstype = "bcsft")
+    cross.object <- read.cross("csv", , tmp, BC.gen = BC.gen)
     
     
   } else if (type == "RIL") {
@@ -326,8 +324,7 @@ IBD.mppData <- function(mppData, het.miss.par = TRUE, subcross.ind = NULL,
     
   } else if (type == "BCsFt"){
     
-    cross.object <- read.cross("csv", , tmp, F.gen = F.gen,
-                               BC.gen = BC.gen, crosstype = "bcsft")
+    cross.object <- read.cross("csv", , tmp, F.gen = F.gen, BC.gen = BC.gen)
     
   }
   

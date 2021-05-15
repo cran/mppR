@@ -4,9 +4,18 @@
 \alias{QC.mppData}
 \title{Quality control for \code{mppData} objects}
 \usage{
-QC.mppData(mppData, mk.miss = 0.1, gen.miss = 0.25, n.lim = 15,
-  MAF.pop.lim = 0.05, MAF.cr.lim = NULL, MAF.cr.miss = TRUE,
-  MAF.cr.lim2 = NULL, verbose = TRUE, n.cores = 1)
+QC.mppData(
+  mppData,
+  mk.miss = 0.1,
+  gen.miss = 0.25,
+  n.lim = 15,
+  MAF.pop.lim = 0.05,
+  MAF.cr.lim = NULL,
+  MAF.cr.miss = TRUE,
+  MAF.cr.lim2 = NULL,
+  verbose = TRUE,
+  n.cores = 1
+)
 }
 \arguments{
 \item{mppData}{An object of class \code{mppData} formed with
@@ -93,7 +102,7 @@ The different operations of the quality control are the following:
 \item{Remove crosses with less than \code{n.lim} genotypes.}
 
 \item{Keep only the most polymorphic marker when multiple markers map at the
-same position.}
+same position.} 
 
 \item{Check marker minor allele frequency (MAF). Different strategy can be
 used to control marker MAF:
@@ -107,7 +116,7 @@ using \code{MAF.cr.lim}. By default, the within cross MAF values are defined
 by the following function of the cross-size n.ci: MAF(n.ci) = 0.5 if n.ci c
 [0, 10] and MAF(n.ci) = (4.5/n.ci) + 0.05 if n.ci > 10. This means that up
 to 10 genotypes, the critical within cross MAF is set to 50%. Then it
-decreases when the number of genotype increases until 5% set as a lower bound.
+decreases when the number of genotype increases until 5% set as a lower bound. 
 
 If the within cross MAF is below the limit in at least one cross, then marker
 scores of the problematic cross are either put as missing
@@ -119,7 +128,7 @@ diversity.
 B) An alternative is to select only markers that segregate in at least
 on cross at the \code{MAF.cr.lim2} rate.
 
-}
+  }
 
 }
 }

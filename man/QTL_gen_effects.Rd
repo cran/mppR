@@ -4,8 +4,14 @@
 \alias{QTL_gen_effects}
 \title{QTL genetic effects}
 \usage{
-QTL_gen_effects(mppData, trait = 1, QTL = NULL, Q.eff = "cr",
-  ref.par = NULL, sum_zero = FALSE)
+QTL_gen_effects(
+  mppData,
+  trait = 1,
+  QTL = NULL,
+  Q.eff = "cr",
+  ref.par = NULL,
+  sum_zero = FALSE
+)
 }
 \arguments{
 \item{mppData}{An object of class \code{mppData}.}

@@ -4,8 +4,7 @@
 \alias{mpp_back_elim}
 \title{Backward elimination on QTL candidates}
 \usage{
-mpp_back_elim(mppData, trait = 1, QTL = NULL, Q.eff = "cr",
-  alpha = 0.05)
+mpp_back_elim(mppData, trait = 1, QTL = NULL, Q.eff = "cr", alpha = 0.05)
 }
 \arguments{
 \item{mppData}{An object of class \code{mppData}.}

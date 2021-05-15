@@ -4,8 +4,15 @@
 \alias{mpp_perm}
 \title{QTL significance threshold by permutation}
 \usage{
-mpp_perm(mppData, trait = 1, Q.eff = "cr", N = 1000, q.val = 0.95,
-  verbose = TRUE, n.cores = 1)
+mpp_perm(
+  mppData,
+  trait = 1,
+  Q.eff = "cr",
+  N = 1000,
+  q.val = 0.95,
+  verbose = TRUE,
+  n.cores = 1
+)
 }
 \arguments{
 \item{mppData}{An object of class \code{mppData}.}

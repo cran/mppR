@@ -1,3 +1,10 @@
+# mppR 1.3.0
+* Correction of few problems to load BCsFt populations (IBD.mppData).
+* Addition of new options in MQE_proc: possibility to select a reference parent
+effect calculation, possibility to calculate a confidence interval for the QTL positions
+* Addition of new functions (QTL_forward, mpp_forward) to realize a MPP QTL detection
+using a forward regression strategy
+
 # mppR 1.2.1
 * Correction due to the fact that package synbreed was removed from CRAN
 * The possibility to do marker imputation was suppressed.

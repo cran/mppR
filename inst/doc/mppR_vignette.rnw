@@ -1,6 +1,6 @@
 %\documentclass[article, shortnames]{jss}
 \documentclass[nojss,shortnames]{jss}
-%\VignetteIndexEntry{\pkg{mppR}: An \proglang{R} Package for QTL Analysis in Multi-parent Populations using Linear Mixed Models}
+%\VignetteIndexEntry{mppR: An R Package for QTL Analysis in Multi-parent Populations}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -25,7 +25,7 @@ An increased \code{mppData} object containing the the same elements
 as the \code{mppData} object provided as argument and the
 following new elements:
 
-\item{par.clu}{\code{Integer matrix} with rows repersenting markers and
+\item{par.clu}{\code{Integer matrix} with rows representing markers and
 columns corresponding to the parents. At a single marker position, parents
 with the same value were clustered in the same ancestral group.}
 
@@ -43,25 +43,29 @@ still be computed.
 \details{
 At a single marker position, two parents can be grouped into a similar
 ancestral classes if we assume that they receive there allele from a common
-ancetor. The parent clustering information (\code{par.clu}) describe parental
+ancestor. The parent clustering information (\code{par.clu}) describe parental
 relatedness and which parent belong to which ancestral group. For example,
 at marker i, we could have five parents (pA, pB, pC, pD, pE) and the following
 clustering information (1, 2, 1, 2, 3). This means that pA and pC received
-their allele from the same ancetor (A1). pB and pD also have a shared
+their allele from the same ancestor (A1). pB and pD also have a shared
 ancestor (A2) who is different from (A1). And pE was not included in any
-group and can be seen as an indepedent ancestral group (A3).
+group and can be seen as an independent ancestral group (A3).
 
 The parent clustering information is provided via \code{par.clu}. It is an
 \code{interger matrix} with markers in row and parents in columns.
 At a particular marker position, parents with the same value are assumed to
 inherit from the same ancestor. for more details, see \code{\link{par_clu}}.
 
+The marker positions that are considered as monomorphic given the parent
+clustering information are set back to one allele per parent to still allow
+the computation of the QTL allelic effect at those positions later.
+
 The parent clustering can be performed using the R package
 'clusthaplo' that can be found there:
 \url{https://cran.r-project.org/src/contrib/Archive/clusthaplo/}.
 The 'clusthaplo' option is not integrated in this version of mppR. However,
 a version of mppR with function calling clusthaplo can be found on github
-\url{https://github.com/vincentgarin/mppR} (branch mppR_clusthaplo).
+\url{https://github.com/vincentgarin/mppR} (branch master).
 }
 \examples{
 

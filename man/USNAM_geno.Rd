@@ -23,7 +23,7 @@ the following crosses: (B73 x CML103), (B73 x CML322), (B73 x CML52),
 also included. The data are available on www.panzea.org.
 }
 \source{
-\url{http://www.panzea.org}
+\url{https://www.panzea.org/}
 }
 \references{
 McMullen, M. D., Kresovich, S., Villeda, H. S., Bradbury, P., Li, H., Sun, Q.,

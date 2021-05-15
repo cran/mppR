@@ -4,8 +4,14 @@
 \alias{create.mppData}
 \title{Create a multi-parent population data object}
 \usage{
-create.mppData(geno.off = NULL, geno.par = NULL, map = NULL,
-  pheno = NULL, cross.ind = NULL, par.per.cross = NULL)
+create.mppData(
+  geno.off = NULL,
+  geno.par = NULL,
+  map = NULL,
+  pheno = NULL,
+  cross.ind = NULL,
+  par.per.cross = NULL
+)
 }
 \arguments{
 \item{geno.off}{\code{Character} marker score \code{matrix} of the offspring
