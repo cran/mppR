@@ -493,8 +493,10 @@ mpp_proc <- function(pop.name = "MPP", trait.name = "trait1", mppData,
     
     pdf(file.path(folder.loc, "QTL_profile.pdf"), height = 10, width = 16)
     
-    print(plot(x = CIM, QTL = cofactors, type = "h", main = main.cim,
-                       threshold = thre.QTL, text.size = text.size))
+    pl <- plot(x = CIM, QTL = cofactors, type = "h", main = main.cim,
+                       threshold = thre.QTL, text.size = text.size)
+    
+    print(pl)
     
     dev.off()
     
@@ -505,8 +507,10 @@ mpp_proc <- function(pop.name = "MPP", trait.name = "trait1", mppData,
     pdf(file.path(folder.loc, "QTL_profile.pdf"), height = 10, width = 16)
     
     
-    print(plot(x = CIM, QTL = cofactors, type = "l", main = main.cim,
-                       threshold = thre.QTL, text.size = text.size))
+    pl <- plot(x = CIM, QTL = cofactors, type = "l", main = main.cim,
+                       threshold = thre.QTL, text.size = text.size)
+    
+    print(pl)
     
     dev.off()
     
@@ -516,8 +520,10 @@ mpp_proc <- function(pop.name = "MPP", trait.name = "trait1", mppData,
       
       pdf(file.path(folder.loc, "gen_eff.pdf"), height = 10, width = 16)
       
-      print(plot(x = CIM, gen.eff = TRUE, mppData = mppData,  Q.eff = Q.eff,
-                 QTL = QTL, main = main.Qeff, text.size = text.size))
+      pl <- plot(x = CIM, gen.eff = TRUE, mppData = mppData,  Q.eff = Q.eff,
+                 QTL = QTL, main = main.Qeff, text.size = text.size)
+      
+      print(pl)
       
       dev.off()
       

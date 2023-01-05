@@ -1,3 +1,8 @@
+# mppR 1.4.0
+* Addition of function to perform multi-parent multi-environment QTL detection (mppGE_SIM, mppGE_CIM, mppGE_proc, etc.)
+* Addition of a new vignette to illustrate the multi-parent multi-environment QTL detection
+* Extra function (mppData_add_pheno, mppData_mdf_pheno) to manipulate mppData objects especially modify the phenotypic data
+
 # mppR 1.3.0
 * Correction of few problems to load BCsFt populations (IBD.mppData).
 * Addition of new options in MQE_proc: possibility to select a reference parent

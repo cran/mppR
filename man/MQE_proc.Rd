@@ -152,6 +152,8 @@ forward regression.}
 }
 \examples{
 
+\dontrun{
+
 data(mppData)
 
 # Specify a location where your results will be saved
@@ -161,6 +163,7 @@ MQE <- MQE_proc(pop.name = "USNAM", trait.name = "ULA", mppData = mppData,
                 Q.eff = c("par", "biall"), verbose = FALSE,
                 output.loc = my.loc)
                  
+}
 
 }
 \seealso{

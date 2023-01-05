@@ -168,6 +168,8 @@ The bias between p.ts and p.vs is calculated as bias = 1 - (p.vs/p.ts).
 }
 \examples{
 
+\dontrun{
+
 data(mppData)
 
 # Specify a location where your results will be saved
@@ -175,6 +177,8 @@ my.loc <- tempdir()
 
 CV <- mpp_CV(pop.name = "USNAM", trait.name = "ULA", mppData = mppData,
 her = .4, Rep = 1, k = 3, verbose = FALSE, output.loc = my.loc)
+
+}
 
 }
 \references{

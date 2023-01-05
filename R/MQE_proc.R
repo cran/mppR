@@ -134,6 +134,8 @@
 #' 
 #' @examples
 #' 
+#' \dontrun{
+#' 
 #' data(mppData)
 #' 
 #' # Specify a location where your results will be saved
@@ -143,6 +145,7 @@
 #'                 Q.eff = c("par", "biall"), verbose = FALSE,
 #'                 output.loc = my.loc)
 #'                  
+#' }
 #' 
 #' @export
 #' 

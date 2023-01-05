@@ -17,7 +17,7 @@ devtools::install_github("vincentgarin/mppR", ref = "master")
 
 ## Usage
 
-[vignette of the package](inst/doc/mppR_vignette.pdf)
+See the two vignettes attached to the package.
 
 # Travis
 
