@@ -21,5 +21,4 @@ See the two vignettes attached to the package.
 
 # Travis
 
-[![Travis-CI Build Status](https://travis-ci.org/vincentgarin/mppR.svg?branch=master,mppR_CRAN)](https://travis-ci.org/vincentgarin/mppR)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/mppR)](https://cran.r-project.org/package=mppR)

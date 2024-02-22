@@ -1,15 +1,15 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 
-## ----setup, fig.height = 4, fig.width = 6-------------------------------------
+## ----setup, fig.height = 4, fig.width = 5-------------------------------------
 library(mppR)
 data(mppData_GE)
 design_connectivity(par_per_cross = mppData_GE$par.per.cross)
 
-## ----SIM, fig.height = 5, fig.width = 9---------------------------------------
+## ----SIM, fig.height = 5, fig.width = 7---------------------------------------
 SIM <- mppGE_SIM(mppData = mppData_GE, trait = c('DMY_CIAM', 'DMY_TUM'), ref_par = 'UH007')
 plot(x = SIM)
 
@@ -18,11 +18,10 @@ cofactors <- QTL_select(Qprof = SIM, threshold = 4, window = 50)
 
 ## ----CIM----------------------------------------------------------------------
 CIM <- mppGE_CIM(mppData = mppData_GE, trait = c('DMY_CIAM', 'DMY_TUM'),
-                 VCOV = "UN", VCOV_data = "unique", cofactors = cofactors,
-                 window = 20)
+                 cofactors = cofactors, window = 20, VCOV_data = "unique")
 
 ## ----QTLs---------------------------------------------------------------------
-QTL <- QTL_select(Qprof = SIM, threshold = 4, window = 20)
+QTL <- QTL_select(Qprof = CIM, threshold = 4, window = 20)
 
 ## ----QTL_effects--------------------------------------------------------------
 Qeff <- QTL_effect_GE(mppData = mppData_GE, trait = c('DMY_CIAM', 'DMY_TUM'),
@@ -41,10 +40,10 @@ QR2$glb.adj.R2
 QR2$part.adj.R2.diff
 
 
-## ----Q_prof, fig.height = 5, fig.width = 9------------------------------------
+## ----Q_prof, fig.height = 5, fig.width = 7------------------------------------
 plot(x = CIM)
 
-## ----Q_eff_plot, fig.height = 5, fig.width = 9--------------------------------
+## ----Q_eff_plot, fig.height = 5, fig.width = 7--------------------------------
 plot_allele_eff_GE(mppData = mppData_GE, nEnv = 2,
                    EnvNames = c('CIAM', 'TUM'), Qprof = CIM,
                    QTL = QTL, text.size = 14)
@@ -54,21 +53,36 @@ MPP_GE_QTL <- mppGE_proc(pop.name = 'EUNAM', trait.name = 'DMY',
                          mppData = mppData_GE, trait = c('DMY_CIAM', 'DMY_TUM'),
                          n.cores = 1, verbose = FALSE, output.loc = tempdir())
 
-## ----QTLxEC, eval=FALSE-------------------------------------------------------
-#  EC <- matrix(c(180, 310, 240, 280), 4, 1)
-#  rownames(EC) <- c('CIAM', 'TUM', 'INRA', 'KWS')
-#  colnames(EC) <- 'cum_rain'
-#  
-#  Qeff <- QTL_effect_QxEC(mppData = mppData_GE,
-#                          trait = c('DMY_CIAM', 'DMY_TUM', 'DMY_INRA_P', 'DMY_KWS'),
-#                          env_id = c('CIAM', 'TUM', 'INRA', 'KWS'),
-#                          QTL = QTL, EC = EC)
-#  
-#  Qeff$Qeff_EC$QTL1
+## ----QTL_effect_main_QEI------------------------------------------------------
 
-## ----QTLxEC_plot, eval=FALSE--------------------------------------------------
-#  pl <- plot_QTLxEC(Qeff, Q_id = 2, RP = "UH007", EC_id = 'cum rain', trait_id = 'DMY')
-#  pl
+Qeff <- QTL_effect_main_QEI(mppData = mppData_GE,
+                            trait = c('DMY_CIAM', 'DMY_TUM', 'DMY_INRA_P', 'DMY_KWS'),
+                            env_id = c('CIAM', 'TUM', 'INRA', 'KWS'),
+                            QTL = QTL)
+
+## ----QTL_effect_main_QEI Q_sign-----------------------------------------------
+Qeff$Q_sign$QTL2
+
+## ----QTL_effect_main_QEI Q_eff------------------------------------------------
+Qeff$Q_eff$QTL2
+
+## ----QTL_effect_main_QxEC-----------------------------------------------------
+# provide the environmental covariate information as a matrix
+EC <- matrix(c(180, 310, 240, 280), 4, 1)
+rownames(EC) <- c('CIAM', 'TUM', 'INRA', 'KWS')
+colnames(EC) <- 'cum_rain'
+
+Qeff <- QTL_effect_main_QxEC(mppData = mppData_GE,
+                        trait = c('DMY_CIAM', 'DMY_TUM', 'DMY_INRA_P', 'DMY_KWS'),
+                        env_id = c('CIAM', 'TUM', 'INRA', 'KWS'),
+                        QTL = QTL, EC = EC, Qmain_QEI = Qeff, thre_QTL = 1.301)
+
+## ----QTL_effect_main_QxEC Qeff_EC---------------------------------------------
+Qeff$Qeff_EC$QTL2
+
+## ----plot QTL x EC, fig.height = 5, fig.width = 5-----------------------------
+plot_QxEC(Qeff, EC = EC, env_id = c('CIAM', 'TUM', 'INRA', 'KWS'), 
+          QTL = 2, EC_id = 'cum rain', trait_id = 'DMY')
 
 ## ----comp_res_table, echo = FALSE---------------------------------------------
 library(knitr)

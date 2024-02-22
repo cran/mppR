@@ -7,7 +7,14 @@
 #' Estimate the QTL parental allelic effects within environment. The estimation
 #' is performed using an exact mixed model with function from R package
 #' \code{nlme}. The significance of the allele effect is assessed using a 
-#' Wald test. 
+#' Wald test.
+#' 
+#' @details
+#' The estimated model is the following:
+#' 
+#' \eqn{\underline{y}_{icj} = E_{j} + C_{cj} + \sum_{q=1}^{n_{QTL}} x_{i_{q}p} * \beta_{pj} + \underline{GE}_{icj} + \underline{e}_{icj}}
+#'
+#' For further details see the vignette.
 #'
 #' @param mppData An object of class \code{mppData}.
 #'
@@ -136,14 +143,7 @@ QTL_effect_GE <- function(mppData, trait, VCOV = "UN", ref_par = NULL, QTL = NUL
   d <- data.frame(trait = TraitEnv, env = env, cross_env = cross_env, geno = geno)
   d[, 2:4] <- lapply(d[, 2:4], as.factor)
   d <- data.frame(d, QTL_mat)
-  
-  fix_form <- paste0('trait~-1 + cross_env+', paste(QTL_nm, collapse = '+'))
-  
-  m_sg <- lm(as.formula(fix_form), data = d)
-  coeff <- coefficients(m_sg)
-  if(any(is.na(coeff))){
-    d <- d[, -which(colnames(d) %in% names(coeff[is.na(coeff)]))]
-  }
+  d <- remove_singularities(d)
   
   Q_id <- colnames(d)[5:ncol(d)]
   
@@ -160,9 +160,7 @@ QTL_effect_GE <- function(mppData, trait, VCOV = "UN", ref_par = NULL, QTL = NUL
   B_SD <- sqrt(diag(m$varFix)[Q_ind])
   
   # Wald test
-  V_QTL_inv <- qr.solve(m$varFix[Q_ind, Q_ind])
-  W_Qa <- rep(NA, length(B_QTL))
-  for(i in 1:length(W_Qa)) W_Qa[i] <- (B_QTL[i]^2) * diag(V_QTL_inv)[i]
+  W_Qa <- (B_QTL/B_SD)^2
   W_pval <- pchisq(W_Qa, 1, lower.tail = FALSE)
   W_sign <- sapply(W_pval, sign.star) 
   

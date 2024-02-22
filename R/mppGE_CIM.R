@@ -10,6 +10,14 @@
 #' is used to estimate the QTL global and within parental effect significance using a
 #' Wald test.
 #' 
+#' @details
+#' 
+#' The estimated model is the following:
+#' 
+#' \eqn{\underline{y}_{icj} = E_{j} + C_{cj} + \sum_{qc=1}^{n_{cof}} x_{i_{qc}p} + \beta_{pj} + x_{i_{q}p} * \beta_{pj} + \underline{GE}_{icj} + \underline{e}_{icj}}
+#'
+#' For further details see the vignette.
+#' 
 #' It is possible to calculate one initial VCOV using a null model with all
 #' the cofactors (\code{VCOV_data = "unique"}) or one VCOV per combination of
 #' cofactors (\code{VCOV_data = "minus_cof"}). In the later case, the cofactor

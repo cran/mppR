@@ -75,7 +75,8 @@ W_QTL <- function(x, y, Vi, mppData, Q.eff, cross_mat, cof_mat = NULL,
           
           E_ind <- grepl(pattern = E_id[e], x = B_nm)
           Beta_QTL_e <- Beta_QTL[E_ind, , drop = FALSE]
-          W_e <- t(Beta_QTL_e) %*% V_QTL_inv[E_ind, E_ind] %*% Beta_QTL_e
+          W_e <- tryCatch(t(Beta_QTL_e) %*% qr.solve(V_QTL[E_ind, E_ind]) %*% Beta_QTL_e,
+                          error = function(e) matrix(NA,1))
           EQ_pval[e] <- pchisq(W_e[1, 1], nrow(Beta_QTL_e), lower.tail = FALSE)
           
         }
@@ -84,7 +85,7 @@ W_QTL <- function(x, y, Vi, mppData, Q.eff, cross_mat, cof_mat = NULL,
         
         # decomposition of individual QTL alleles
         W_Qa <- rep(NA, length(Beta_QTL))
-        for(i in 1:length(W_Qa)) W_Qa[i] <- (Beta_QTL[i]^2) * diag(V_QTL_inv)[i]
+        for(i in 1:length(W_Qa)) W_Qa[i] <- (Beta_QTL[i]^2) / V_QTL[i, i]
         W_Qa <- pchisq(W_Qa, 1, lower.tail = FALSE)
         W_Qa <- W_Qa * Eff_sign
         names(W_Qa) <- colnames(X)[Q_ind]

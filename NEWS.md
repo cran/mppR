@@ -1,3 +1,7 @@
+# mppR 1.5.0
+* Modification replacement of the functions QTL_effect_main_QxE by QTL_effect_main_QEI and QTL_effect_QxEC by QTL_effect_main_QxEC to update the procedure to estimate the significance of the QTL by environment interaction of the parental allelic effects and the estimation of the sensitivity slope
+* Correction of a bug to calculate the significance of the QTLxE effect using the Wald test
+
 # mppR 1.4.0
 * Addition of function to perform multi-parent multi-environment QTL detection (mppGE_SIM, mppGE_CIM, mppGE_proc, etc.)
 * Addition of a new vignette to illustrate the multi-parent multi-environment QTL detection

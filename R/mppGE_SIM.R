@@ -9,6 +9,13 @@
 #' using function from the \code{nlme} package. Then, this information is used
 #' to estimate the QTL global and within parental effect significance using a
 #' Wald test.
+#' 
+#' @details
+#' The estimated model is the following:
+#' 
+#' \eqn{\underline{y}_{icj} = E_{j} + C_{cj} + x_{i_{q}p} * \beta_{pj} + \underline{GE}_{icj} + \underline{e}_{icj}}
+#'
+#' For further details see the vignette.
 #'
 #' @param mppData An object of class \code{mppData}.
 #'
